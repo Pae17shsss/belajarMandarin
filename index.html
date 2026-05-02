@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🇹🇼 Belajar Mandarin Taiwan – Panduan Ujian 6 Bab</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
+<style>
+:root {
+  --tone1: #e74c3c; /* nada 1 - merah */
+  --tone2: #f39c12; /* nada 2 - oranye */
+  --tone3: #27ae60; /* nada 3 - hijau */
+  --tone4: #2980b9; /* nada 4 - biru */
+  --tone5: #8e44ad; /* nada netral */
+  --bg: #fef9f0;
+  --card: #ffffff;
+  --primary: #ff6b6b;
+  --primary2: #feca57;
+  --accent: #48dbfb;
+  --accent2: #ff9ff3;
+  --dark: #2d3436;
+  --gray: #636e72;
+  --light: #f8f9fa;
+  --border: #dee2e6;
+  --shadow: 0 8px 32px rgba(0,0,0,0.12);
+  --radius: 20px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+/* NAV */
+#topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid var(--primary2);
+  display: flex; align-items: center; gap: 8px; padding: 10px 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 20px rgba(255,107,107,0.15);
+}
+.nav-logo {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.4rem; color: var(--primary); margin-right: 8px;
+  white-space: nowrap;
+}
+.nav-btn {
+  padding: 6px 14px; border: none; border-radius: 50px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.8rem;
+  cursor: pointer; transition: all 0.2s; white-space: nowrap;
+  background: var(--light); color: var(--dark);
+}
+.nav-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+.nav-btn.active { background: var(--primary); color: white; }
+/* PAGES */
+.page { display: none; padding: 80px 20px 40px; max-width: 1100px; margin: 0 auto; }
+.page.active { display: block; }
+/* HOME */
+.hero {
+  text-align: center; padding: 40px 20px;
+  background: linear-gradient(135deg, #ff6b6b22, #feca5722, #48dbfb22);
+  border-radius: var(--radius); margin-bottom: 30px;
+  border: 2px solid var(--primary2);
+}
+.hero h1 {
+  font-family: 'Fredoka One', cursive; font-size: 2.5rem; color: var(--primary);
+  margin-bottom: 8px;
+}
+.hero p { font-size: 1.1rem; color: var(--gray); }
+.chapters-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-bottom: 30px; }
+.chapter-card {
+  background: var(--card); border-radius: var(--radius); padding: 20px;
+  box-shadow: var(--shadow); cursor: pointer; transition: all 0.25s;
+  border: 2px solid transparent; position: relative; overflow: hidden;
+}
+.chapter-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+}
+.chapter-card:nth-child(1)::before { background: linear-gradient(90deg,#ff6b6b,#ff9ff3); }
+.chapter-card:nth-child(2)::before { background: linear-gradient(90deg,#feca57,#ff9f43); }
+.chapter-card:nth-child(3)::before { background: linear-gradient(90deg,#48dbfb,#54a0ff); }
+.chapter-card:nth-child(4)::before { background: linear-gradient(90deg,#1dd1a1,#55efc4); }
+.chapter-card:nth-child(5)::before { background: linear-gradient(90deg,#fd79a8,#e84393); }
+.chapter-card:nth-child(6)::before { background: linear-gradient(90deg,#a29bfe,#6c5ce7); }
+.chapter-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.18); border-color: var(--primary2); }
+.chapter-card .num { font-size: 2rem; font-family: 'Fredoka One', cursive; color: var(--primary2); }
+.chapter-card h3 { font-size: 1.1rem; font-weight: 800; margin: 4px 0; }
+.chapter-card .hanzi { font-size: 1.4rem; color: var(--gray); margin: 4px 0; font-family: 'Noto Sans TC'; }
+.chapter-card .count { font-size: 0.85rem; color: var(--gray); background: var(--light); padding: 3px 10px; border-radius: 20px; display: inline-block; margin-top: 8px; }
+/* TONE LEGEND */
+.tone-legend {
+  display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+  margin-bottom: 20px; background: white; padding: 16px; border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.tone-badge {
+  display: flex; align-items: center; gap: 6px; padding: 6px 14px;
+  border-radius: 50px; font-weight: 700; font-size: 0.85rem;
+}
+.t1 { background: #fde8e8; color: var(--tone1); }
+.t2 { background: #fef5e4; color: var(--tone2); }
+.t3 { background: #e8f8f0; color: var(--tone3); }
+.t4 { background: #e8f4fb; color: var(--tone4); }
+.t5 { background: #f3eafd; color: var(--tone5); }
+/* VOCAB PAGE */
+.filter-bar {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
+  background: white; padding: 16px; border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.filter-btn {
+  padding: 6px 16px; border: 2px solid var(--border); border-radius: 50px;
+  background: white; cursor: pointer; font-weight: 700; font-size: 0.85rem;
+  transition: all 0.2s; font-family: 'Nunito', sans-serif;
+}
+.filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+.vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.vocab-card {
+  background: var(--card); border-radius: 16px; padding: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08); cursor: pointer;
+  transition: all 0.25s; border: 2px solid transparent;
+  position: relative; overflow: hidden;
+}
+.vocab-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+.vocab-card.learned { border-color: var(--tone3); }
+.vocab-card.learned::after {
+  content: '✓'; position: absolute; top: 8px; right: 8px;
+  background: var(--tone3); color: white; width: 22px; height: 22px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 900;
+}
+.hanzi-big {
+  font-family: 'Noto Sans TC', serif; font-size: 2.8rem; font-weight: 900;
+  line-height: 1; margin-bottom: 6px; text-align: center; display: block;
+}
+.pinyin { font-size: 0.95rem; font-weight: 700; text-align: center; display: block; margin-bottom: 4px; }
+.meaning { font-size: 0.85rem; color: var(--gray); text-align: center; display: block; }
+.pos-badge {
+  position: absolute; top: 8px; left: 8px;
+  font-size: 0.65rem; font-weight: 800; padding: 2px 6px;
+  border-radius: 8px; background: var(--light); color: var(--gray);
+}
+.speak-btn {
+  position: absolute; bottom: 8px; right: 8px;
+  background: none; border: none; cursor: pointer; font-size: 1.2rem;
+  transition: transform 0.2s;
+}
+.speak-btn:hover { transform: scale(1.3); }
+/* FLASHCARD */
+.flashcard-area { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.fc-controls { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.fc-ctrl-btn {
+  padding: 8px 20px; border: none; border-radius: 50px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.9rem;
+  cursor: pointer; transition: all 0.2s;
+}
+.scene {
+  width: 340px; height: 200px; perspective: 1000px; cursor: pointer;
+}
+.card-inner {
+  width: 100%; height: 100%; position: relative;
+  transform-style: preserve-3d; transition: transform 0.6s;
+}
+.scene.flipped .card-inner { transform: rotateY(180deg); }
+.card-front, .card-back {
+  position: absolute; width: 100%; height: 100%;
+  backface-visibility: hidden; border-radius: var(--radius);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 24px; box-shadow: var(--shadow);
+}
+.card-front { background: white; }
+.card-back { background: linear-gradient(135deg, #667eea, #764ba2); color: white; transform: rotateY(180deg); }
+.card-hint { font-size: 0.8rem; color: var(--gray); margin-top: 8px; }
+.fc-progress { width: 340px; background: var(--border); border-radius: 20px; height: 8px; overflow: hidden; }
+.fc-progress-bar { height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: 20px; transition: width 0.3s; }
+.fc-actions { display: flex; gap: 12px; }
+.btn-know { background: var(--tone3); color: white; }
+.btn-dunno { background: var(--tone1); color: white; }
+.btn-skip { background: var(--gray); color: white; }
+.fc-stats { display: flex; gap: 20px; background: white; padding: 16px 24px; border-radius: 16px; box-shadow: var(--shadow); }
+.stat { text-align: center; }
+.stat .num { font-size: 1.8rem; font-weight: 900; font-family: 'Fredoka One'; }
+.stat .lbl { font-size: 0.75rem; color: var(--gray); font-weight: 700; text-transform: uppercase; }
+/* QUIZ */
+.quiz-container { max-width: 700px; margin: 0 auto; }
+.quiz-header { background: white; border-radius: var(--radius); padding: 20px; margin-bottom: 20px; box-shadow: var(--shadow); }
+.quiz-q {
+  background: linear-gradient(135deg, #ff6b6b, #ff9ff3);
+  color: white; border-radius: var(--radius); padding: 32px 24px;
+  text-align: center; margin-bottom: 20px; box-shadow: var(--shadow);
+}
+.quiz-q .big-hanzi { font-family: 'Noto Sans TC'; font-size: 4rem; font-weight: 900; }
+.quiz-q .q-label { font-size: 0.9rem; opacity: 0.8; margin-bottom: 8px; }
+.quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.quiz-opt {
+  background: white; border: 2px solid var(--border); border-radius: 16px;
+  padding: 16px; cursor: pointer; text-align: center; transition: all 0.2s;
+  font-weight: 700; font-size: 1rem;
+}
+.quiz-opt:hover { border-color: var(--primary); background: #fff5f5; }
+.quiz-opt.correct { border-color: var(--tone3); background: #e8f8f0; color: var(--tone3); }
+.quiz-opt.wrong { border-color: var(--tone1); background: #fde8e8; color: var(--tone1); }
+.quiz-opt.reveal { border-color: var(--tone3); background: #e8f8f0; }
+/* GRAMMAR */
+.grammar-section { margin-bottom: 32px; background: white; border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+.grammar-title { font-size: 1.4rem; font-weight: 900; color: var(--primary); margin-bottom: 6px; }
+.grammar-chapter { font-size: 0.8rem; color: var(--gray); margin-bottom: 16px; }
+.formula-box {
+  background: linear-gradient(135deg, #667eea22, #764ba222);
+  border: 2px dashed #667eea;
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  font-family: 'Fredoka One', cursive; font-size: 1.1rem; color: #667eea;
+  letter-spacing: 1px;
+}
+.example-row {
+  background: var(--light); border-radius: 12px; padding: 14px 16px;
+  margin-bottom: 10px; border-left: 4px solid var(--primary2);
+}
+.example-hanzi { font-family: 'Noto Sans TC'; font-size: 1.2rem; font-weight: 700; }
+.example-pinyin { font-size: 0.85rem; color: var(--gray); margin: 2px 0; }
+.example-id { font-size: 0.85rem; color: var(--tone3); font-weight: 700; }
+/* MEMORY GAME */
+.memory-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 700px; margin: 0 auto; }
+.mem-card {
+  aspect-ratio: 1; background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 12px; cursor: pointer; display: flex; align-items: center;
+  justify-content: center; font-size: 1.2rem; color: transparent;
+  transition: all 0.3s; box-shadow: 0 4px 12px rgba(102,126,234,0.3);
+  user-select: none; font-weight: 700; font-family: 'Noto Sans TC';
+  padding: 8px; text-align: center;
+}
+.mem-card.revealed { background: white; color: var(--dark); border: 3px solid var(--primary); }
+.mem-card.matched { background: linear-gradient(135deg, #1dd1a1, #55efc4); color: white; border: none; }
+/* TONE GUIDE */
+.tone-table { width: 100%; border-collapse: separate; border-spacing: 0 8px; }
+.tone-table th { text-align: left; padding: 10px 16px; color: var(--gray); font-size: 0.8rem; text-transform: uppercase; }
+.tone-table td { padding: 14px 16px; background: white; }
+.tone-table tr td:first-child { border-radius: 12px 0 0 12px; }
+.tone-table tr td:last-child { border-radius: 0 12px 12px 0; }
+.tone-row-1 td { border-left: 5px solid var(--tone1); }
+.tone-row-2 td { border-left: 5px solid var(--tone2); }
+.tone-row-3 td { border-left: 5px solid var(--tone3); }
+.tone-row-4 td { border-left: 5px solid var(--tone4); }
+.tone-row-5 td { border-left: 5px solid var(--tone5); }
+.tone-mark { font-size: 2rem; font-weight: 900; }
+/* SENTENCE BUILDER */
+.builder-area { max-width: 800px; margin: 0 auto; }
+.drop-zone {
+  min-height: 80px; background: white; border: 3px dashed var(--border);
+  border-radius: var(--radius); padding: 16px; display: flex; flex-wrap: wrap;
+  gap: 8px; align-items: center; margin-bottom: 16px; transition: border-color 0.2s;
+}
+.drop-zone.over { border-color: var(--primary); background: #fff5f5; }
+.word-token {
+  background: linear-gradient(135deg, var(--primary), #ff9ff3);
+  color: white; padding: 8px 16px; border-radius: 50px;
+  font-weight: 800; cursor: grab; font-family: 'Noto Sans TC';
+  font-size: 1.1rem; box-shadow: 0 4px 12px rgba(255,107,107,0.3);
+  transition: all 0.2s; user-select: none;
+}
+.word-token:active { cursor: grabbing; transform: scale(0.95); }
+.word-bank { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+/* SEARCH */
+.search-bar {
+  width: 100%; padding: 14px 20px; border: 2px solid var(--border);
+  border-radius: 50px; font-size: 1rem; font-family: 'Nunito', sans-serif;
+  font-weight: 600; outline: none; background: white; margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.search-bar:focus { border-color: var(--primary); }
+/* MODAL */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+  z-index: 2000; align-items: center; justify-content: center;
+}
+.modal-overlay.show { display: flex; }
+.modal {
+  background: white; border-radius: var(--radius); padding: 32px;
+  max-width: 480px; width: 90%; box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+  animation: pop 0.3s ease;
+}
+@keyframes pop { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.modal-hanzi { font-family: 'Noto Sans TC'; font-size: 5rem; text-align: center; display: block; margin-bottom: 8px; }
+.modal-pinyin { font-size: 1.5rem; text-align: center; font-weight: 700; margin-bottom: 4px; }
+.modal-meaning { font-size: 1.1rem; text-align: center; color: var(--gray); margin-bottom: 16px; }
+.modal-example { background: var(--light); border-radius: 12px; padding: 14px; margin-bottom: 12px; font-family: 'Noto Sans TC'; }
+.modal-close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+.modal-relative { position: relative; }
+/* BUTTONS */
+.btn {
+  padding: 12px 28px; border: none; border-radius: 50px;
+  font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem;
+  cursor: pointer; transition: all 0.2s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+.btn-primary { background: linear-gradient(135deg, var(--primary), #ff9ff3); color: white; }
+.btn-secondary { background: linear-gradient(135deg, #feca57, #ff9f43); color: white; }
+.btn-success { background: linear-gradient(135deg, var(--tone3), #55efc4); color: white; }
+/* SCORE DISPLAY */
+.score-ring {
+  width: 120px; height: 120px; border-radius: 50%;
+  background: conic-gradient(var(--tone3) var(--pct, 0%), var(--border) 0%);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; margin: 0 auto 20px;
+}
+.score-ring::before {
+  content: ''; position: absolute;
+  width: 90px; height: 90px; border-radius: 50%; background: white;
+}
+.score-num { position: relative; font-size: 1.8rem; font-weight: 900; font-family: 'Fredoka One'; }
+/* PAGE TITLES */
+.page-title { font-size: 2rem; font-weight: 900; margin-bottom: 4px; font-family: 'Fredoka One'; }
+.page-sub { color: var(--gray); margin-bottom: 24px; }
+/* CLASSIFIER TABLE */
+.clf-table { width: 100%; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.clf-table th { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 14px 16px; text-align: left; }
+.clf-table td { padding: 14px 16px; border-bottom: 1px solid var(--border); background: white; }
+.clf-table tr:last-child td { border-bottom: none; }
+.clf-table tr:nth-child(even) td { background: var(--light); }
+/* ANIMATIONS */
+@keyframes fadeInUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+@keyframes correct-flash { 0%{background:white} 50%{background:#e8f8f0} 100%{background:white} }
+.animate-in { animation: fadeInUp 0.4s ease; }
+.bounce { animation: bounce 0.5s ease; }
+.shake { animation: shake 0.3s ease; }
+/* RESPONSIVE */
+@media(max-width:600px) {
+  .chapters-grid { grid-template-columns: 1fr; }
+  .vocab-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .quiz-options { grid-template-columns: 1fr; }
+  .memory-grid { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  .hero h1 { font-size: 1.8rem; }
+  .scene { width: 300px; height: 180px; }
+}
+/* SECTIONS INSIDE VOCAB */
+.section-head {
+  font-size: 1.1rem; font-weight: 800; color: var(--primary);
+  padding: 8px 16px; background: #fff5f5; border-radius: 10px;
+  margin: 16px 0 8px; display: inline-block;
+}
+/* PROGRESS BAR */
+.progress-container { margin-bottom: 24px; }
+.progress-label { display: flex; justify-content: space-between; margin-bottom: 6px; font-weight: 700; font-size: 0.85rem; }
+.progress-bar-full { background: var(--border); border-radius: 20px; height: 10px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 20px; transition: width 0.5s; }
+/* SPEAKING INDICATOR */
+.speaking { animation: bounce 0.5s infinite; }
+/* NOTIFICATION */
+.notif {
+  position: fixed; top: 80px; right: 20px; padding: 12px 24px;
+  border-radius: 50px; font-weight: 800; box-shadow: var(--shadow);
+  z-index: 3000; animation: fadeInUp 0.3s ease;
+  pointer-events: none;
+}
+.notif-success { background: var(--tone3); color: white; }
+.notif-error { background: var(--tone1); color: white; }
+/* TONE COLORED PINYIN */
+.t1c { color: var(--tone1); font-weight: 800; }
+.t2c { color: var(--tone2); font-weight: 800; }
+.t3c { color: var(--tone3); font-weight: 800; }
+.t4c { color: var(--tone4); font-weight: 800; }
+.t5c { color: var(--tone5); font-weight: 800; }
+.example-pinyin .t1c,.example-pinyin .t2c,.example-pinyin .t3c,.example-pinyin .t4c { font-size:1rem; }
+/* STORY MODE */
+.dialogue-box { background: white; border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); margin-bottom: 16px; }
+.dialogue-line { padding: 10px 0; border-bottom: 1px solid var(--light); }
+.dialogue-line:last-child { border-bottom: none; }
+.speaker { font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+.dl-hanzi { font-family: 'Noto Sans TC'; font-size: 1.1rem; }
+.dl-pinyin { font-size: 0.8rem; color: var(--gray); }
+.dl-id { font-size: 0.8rem; color: var(--tone3); }
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav id="topnav">
+  <div class="nav-logo">🇹🇼 華語學習</div>
+  <button class="nav-btn active" onclick="showPage('home')">🏠 Home</button>
+  <button class="nav-btn" onclick="showPage('vocab')">📚 Kosakata</button>
+  <button class="nav-btn" onclick="showPage('flashcard')">🃏 Flashcard</button>
+  <button class="nav-btn" onclick="showPage('quiz')">🧠 Kuis</button>
+  <button class="nav-btn" onclick="showPage('grammar')">📐 Tata Bahasa</button>
+  <button class="nav-btn" onclick="showPage('tones')">🎵 Nada</button>
+  <button class="nav-btn" onclick="showPage('memory')">🎮 Memory</button>
+  <button class="nav-btn" onclick="showPage('dialogue')">💬 Dialog</button>
+  <button class="nav-btn" onclick="showPage('classifiers')">🔢 Kata Satuan</button>
+</nav>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="vocabModal" onclick="closeModal(event)">
+  <div class="modal modal-relative" id="modalContent">
+    <button class="modal-close" onclick="document.getElementById('vocabModal').classList.remove('show')">✕</button>
+    <span class="modal-hanzi" id="mHanzi"></span>
+    <div class="modal-pinyin" id="mPinyin"></div>
+    <div class="modal-meaning" id="mMeaning"></div>
+    <div id="mExamples"></div>
+    <div style="display:flex;gap:10px;justify-content:center;margin-top:16px;flex-wrap:wrap">
+      <button class="btn btn-primary" onclick="speakModal()">🔊 Ucapkan</button>
+      <button class="btn btn-secondary" onclick="markLearnedFromModal()">✓ Sudah Tahu</button>
+    </div>
+  </div>
+</div>
+
+<!-- NOTIFICATION -->
+<div id="notif" style="display:none"></div>
+
+<!-- ======= HOME PAGE ======= -->
+<div class="page active" id="page-home">
+  <div class="hero animate-in">
+    <h1>🇹🇼 Mandarin Taiwan</h1>
+    <p>Panduan lengkap 6 bab untuk ujian kompetensi kamu!</p>
+    <div style="margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-primary" onclick="showPage('flashcard')">🃏 Mulai Flashcard</button>
+      <button class="btn btn-secondary" onclick="showPage('quiz')">🧠 Coba Kuis</button>
+    </div>
+  </div>
+
+  <div class="tone-legend">
+    <span style="font-weight:800;color:var(--gray)">🎵 KODE WARNA NADA:</span>
+    <span class="tone-badge t1">● Nada 1 (ā) Tinggi Rata</span>
+    <span class="tone-badge t2">● Nada 2 (á) Naik</span>
+    <span class="tone-badge t3">● Nada 3 (ǎ) Turun-Naik</span>
+    <span class="tone-badge t4">● Nada 4 (à) Turun</span>
+    <span class="tone-badge t5">● Nada 5 Netral</span>
+  </div>
+
+  <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:16px">📖 6 Bab yang Dipelajari</h2>
+  <div class="chapters-grid" id="chaptersGrid"></div>
+
+  <div style="background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)">
+    <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:16px">📊 Progress Belajarmu</h3>
+    <div class="progress-container">
+      <div class="progress-label"><span>Kata yang Dipelajari</span><span id="progressCount">0 / 0</span></div>
+      <div class="progress-bar-full"><div class="progress-fill" id="progressFill" style="width:0%;background:linear-gradient(90deg,var(--tone3),var(--accent))"></div></div>
+    </div>
+    <p style="font-size:0.85rem;color:var(--gray)">Klik ✓ pada kartu kosakata untuk menandai kata yang sudah kamu hafal!</p>
+  </div>
+</div>
+
+<!-- ======= VOCAB PAGE ======= -->
+<div class="page" id="page-vocab">
+  <div class="page-title">📚 Kosakata Lengkap</div>
+  <p class="page-sub">Semua kata dari 6 bab – klik untuk detail & suara</p>
+  <input class="search-bar" type="text" placeholder="🔍 Cari kata dalam hanzi, pinyin, atau bahasa Indonesia..." id="searchInput" oninput="filterVocab()">
+  <div class="filter-bar" id="filterBar">
+    <button class="filter-btn active" onclick="filterChapter('all',this)">Semua Bab</button>
+    <button class="filter-btn" onclick="filterChapter('1',this)">Bab 1</button>
+    <button class="filter-btn" onclick="filterChapter('2',this)">Bab 2</button>
+    <button class="filter-btn" onclick="filterChapter('3',this)">Bab 3</button>
+    <button class="filter-btn" onclick="filterChapter('4',this)">Bab 4</button>
+    <button class="filter-btn" onclick="filterChapter('6',this)">Bab 6</button>
+    <button class="filter-btn" onclick="filterChapter('7',this)">Bab 7</button>
+  </div>
+  <div class="vocab-grid" id="vocabGrid"></div>
+</div>
+
+<!-- ======= FLASHCARD PAGE ======= -->
+<div class="page" id="page-flashcard">
+  <div class="page-title">🃏 Flashcard</div>
+  <p class="page-sub">Klik kartu untuk lihat arti – bantu ingatan dengan pengulangan aktif!</p>
+  
+  <div class="fc-controls" style="margin-bottom:20px">
+    <select id="fcChapter" onchange="initFlashcard()" style="padding:8px 16px;border-radius:50px;border:2px solid var(--border);font-family:'Nunito';font-weight:700;font-size:0.9rem">
+      <option value="all">🌐 Semua Bab</option>
+      <option value="1">Bab 1 – Teman Baru</option>
+      <option value="2">Bab 2 – Jam Sekolah</option>
+      <option value="3">Bab 3 – Beli Hadiah</option>
+      <option value="4">Bab 4 – Kopi atau Teh</option>
+      <option value="6">Bab 6 – Olahraga</option>
+      <option value="7">Bab 7 – Cara ke Hotel</option>
+    </select>
+    <select id="fcMode" onchange="initFlashcard()" style="padding:8px 16px;border-radius:50px;border:2px solid var(--border);font-family:'Nunito';font-weight:700;font-size:0.9rem">
+      <option value="h2m">漢字 → Arti (Hafal Hanzi)</option>
+      <option value="m2h">Arti → 漢字 (Hafal Arti)</option>
+      <option value="p2h">Pinyin → 漢字</option>
+      <option value="h2p">漢字 → Pinyin</option>
+    </select>
+    <button class="fc-ctrl-btn btn btn-primary" onclick="initFlashcard()">🔀 Acak Ulang</button>
+    <button class="fc-ctrl-btn btn btn-secondary" onclick="speakCurrent()">🔊 Ucapkan</button>
+  </div>
+
+  <div class="flashcard-area">
+    <div class="fc-stats">
+      <div class="stat"><div class="num t1c" id="fcKnow">0</div><div class="lbl">Hafal 😊</div></div>
+      <div class="stat"><div class="num t4c" id="fcDunno">0</div><div class="lbl">Belum 😅</div></div>
+      <div class="stat"><div class="num" id="fcLeft" style="color:var(--dark)">0</div><div class="lbl">Sisa</div></div>
+    </div>
+    <div class="fc-progress"><div class="fc-progress-bar" id="fcProgressBar" style="width:0%"></div></div>
+    <div class="scene" id="fcScene" onclick="flipCard()">
+      <div class="card-inner" id="fcCardInner">
+        <div class="card-front">
+          <span class="hanzi-big" id="fcFront" style="font-size:3.5rem"></span>
+          <span class="card-hint" id="fcHint"></span>
+        </div>
+        <div class="card-back">
+          <span style="font-size:2rem;font-weight:900;font-family:'Noto Sans TC'" id="fcBackMain"></span>
+          <span style="font-size:1rem;opacity:0.85;margin-top:6px" id="fcBackSub"></span>
+        </div>
+      </div>
+    </div>
+    <div class="fc-actions">
+      <button class="btn btn-dunno" onclick="rateCard(false)">😅 Belum Hafal</button>
+      <button class="btn btn-skip" onclick="nextCard()">⏭ Skip</button>
+      <button class="btn btn-know" onclick="rateCard(true)">😊 Sudah Hafal</button>
+    </div>
+    <p style="font-size:0.85rem;color:var(--gray);text-align:center">💡 Klik kartu untuk balik • Kata yang belum hafal akan muncul lagi</p>
+  </div>
+</div>
+
+<!-- ======= QUIZ PAGE ======= -->
+<div class="page" id="page-quiz">
+  <div class="page-title">🧠 Kuis Mandarin</div>
+  <p class="page-sub">Uji pemahamanmu dengan berbagai jenis soal!</p>
+  
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+        <select id="quizChapter" style="padding:8px 16px;border-radius:50px;border:2px solid var(--border);font-family:'Nunito';font-weight:700">
+          <option value="all">🌐 Semua Bab</option>
+          <option value="1">Bab 1</option><option value="2">Bab 2</option>
+          <option value="3">Bab 3</option><option value="4">Bab 4</option>
+          <option value="6">Bab 6</option><option value="7">Bab 7</option>
+        </select>
+        <select id="quizType" style="padding:8px 16px;border-radius:50px;border:2px solid var(--border);font-family:'Nunito';font-weight:700">
+          <option value="h2m">漢字 → Arti</option>
+          <option value="m2h">Arti → 漢字</option>
+          <option value="p2m">Pinyin → Arti</option>
+          <option value="h2p">漢字 → Pinyin</option>
+        </select>
+        <button class="btn btn-primary" onclick="startQuiz()">▶ Mulai Kuis</button>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <span style="font-weight:800">Soal: <span id="qNum" style="color:var(--primary)">0</span>/<span id="qTotal">10</span></span>
+        <span style="font-weight:800">Skor: <span id="qScore" style="color:var(--tone3)">0</span></span>
+      </div>
+    </div>
+    
+    <div id="quizArea">
+      <div style="text-align:center;padding:60px 20px;color:var(--gray)">
+        <div style="font-size:3rem;margin-bottom:12px">🎯</div>
+        <p style="font-size:1.1rem;font-weight:700">Pilih pengaturan kuis dan klik <strong>▶ Mulai Kuis</strong></p>
+      </div>
+    </div>
+    <div id="quizResult" style="display:none;text-align:center">
+      <div class="score-ring" id="scoreRing"><span class="score-num" id="finalScore">0%</span></div>
+      <h2 id="resultMsg" style="font-size:1.6rem;font-weight:900;margin-bottom:8px"></h2>
+      <p id="resultSub" style="color:var(--gray);margin-bottom:20px"></p>
+      <button class="btn btn-primary" onclick="startQuiz()">🔄 Coba Lagi</button>
+    </div>
+  </div>
+</div>
+
+<!-- ======= GRAMMAR PAGE ======= -->
+<div class="page" id="page-grammar">
+  <div class="page-title">📐 Tata Bahasa Mandarin</div>
+  <p class="page-sub">Pola kalimat penting dari semua 6 bab</p>
+  <div id="grammarContent"></div>
+</div>
+
+<!-- ======= TONES PAGE ======= -->
+<div class="page" id="page-tones">
+  <div class="page-title">🎵 Panduan Nada (聲調)</div>
+  <p class="page-sub">Mandarin Taiwan memiliki 4 nada + 1 nada netral – SANGAT PENTING!</p>
+  
+  <div style="background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);margin-bottom:24px">
+    <h3 style="font-weight:800;margin-bottom:16px">⚠️ Kenapa Nada Itu Penting?</h3>
+    <p style="margin-bottom:12px;line-height:1.7">Dalam bahasa Mandarin, <strong>1 kata yang sama bisa punya arti berbeda</strong> tergantung nadanya! Contoh dengan huruf "ma":</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px">
+      <div style="background:#fde8e8;border-radius:12px;padding:16px;text-align:center">
+        <div style="font-family:'Noto Sans TC';font-size:2.5rem;color:var(--tone1)">媽</div>
+        <div style="font-weight:800;color:var(--tone1)">mā (Nada 1)</div>
+        <div style="color:var(--gray)">Ibu</div>
+      </div>
+      <div style="background:#fef5e4;border-radius:12px;padding:16px;text-align:center">
+        <div style="font-family:'Noto Sans TC';font-size:2.5rem;color:var(--tone2)">麻</div>
+        <div style="font-weight:800;color:var(--tone2)">má (Nada 2)</div>
+        <div style="color:var(--gray)">Rami/Kesemutan</div>
+      </div>
+      <div style="background:#e8f8f0;border-radius:12px;padding:16px;text-align:center">
+        <div style="font-family:'Noto Sans TC';font-size:2.5rem;color:var(--tone3)">馬</div>
+        <div style="font-weight:800;color:var(--tone3)">mǎ (Nada 3)</div>
+        <div style="color:var(--gray)">Kuda</div>
+      </div>
+      <div style="background:#e8f4fb;border-radius:12px;padding:16px;text-align:center">
+        <div style="font-family:'Noto Sans TC';font-size:2.5rem;color:var(--tone4)">罵</div>
+        <div style="font-weight:800;color:var(--tone4)">mà (Nada 4)</div>
+        <div style="color:var(--gray)">Memaki</div>
+      </div>
+    </div>
+  </div>
+
+  <table class="tone-table">
+    <thead><tr><th>Nada</th><th>Tanda</th><th>Cara Pengucapan</th><th>Contoh Kata</th><th>Suara</th></tr></thead>
+    <tbody>
+      <tr class="tone-row-1">
+        <td><span class="tone-badge t1">Nada 1</span></td>
+        <td><span class="tone-mark" style="color:var(--tone1)">ā</span> (garis lurus)</td>
+        <td>Tinggi dan rata, seperti nada "do" tinggi yang panjang<br><small style="color:var(--gray)">Gambar: ⟶ mendatar</small></td>
+        <td>
+          <div style="font-family:'Noto Sans TC';font-size:1.3rem">媽 mā (Ibu)</div>
+          <div style="font-family:'Noto Sans TC'">書 shū (Buku)</div>
+          <div style="font-family:'Noto Sans TC'">天 tiān (Langit)</div>
+        </td>
+        <td><button class="speak-btn" onclick="speak('媽,書,天')">🔊</button></td>
+      </tr>
+      <tr class="tone-row-2">
+        <td><span class="tone-badge t2">Nada 2</span></td>
+        <td><span class="tone-mark" style="color:var(--tone2)">á</span> (naik)</td>
+        <td>Naik seperti kamu bertanya "hah?" dalam bahasa Indonesia<br><small style="color:var(--gray)">Gambar: ↗ naik</small></td>
+        <td>
+          <div style="font-family:'Noto Sans TC';font-size:1.3rem">人 rén (Orang)</div>
+          <div style="font-family:'Noto Sans TC'">學 xué (Belajar)</div>
+          <div style="font-family:'Noto Sans TC'">文 wén (Bahasa)</div>
+        </td>
+        <td><button class="speak-btn" onclick="speak('人,學,文')">🔊</button></td>
+      </tr>
+      <tr class="tone-row-3">
+        <td><span class="tone-badge t3">Nada 3</span></td>
+        <td><span class="tone-mark" style="color:var(--tone3)">ǎ</span> (turun-naik)</td>
+        <td>Turun dulu lalu naik, seperti "ya~ah" dengan ragu<br><small style="color:var(--gray)">Gambar: ↘↗ turun lalu naik</small></td>
+        <td>
+          <div style="font-family:'Noto Sans TC';font-size:1.3rem">我 wǒ (Saya)</div>
+          <div style="font-family:'Noto Sans TC'">買 mǎi (Membeli)</div>
+          <div style="font-family:'Noto Sans TC'">你 nǐ (Kamu)</div>
+        </td>
+        <td><button class="speak-btn" onclick="speak('我,買,你')">🔊</button></td>
+      </tr>
+      <tr class="tone-row-4">
+        <td><span class="tone-badge t4">Nada 4</span></td>
+        <td><span class="tone-mark" style="color:var(--tone4)">à</span> (turun)</td>
+        <td>Turun tajam dan tegas, seperti memerintah "tidak!"<br><small style="color:var(--gray)">Gambar: ↘ turun tajam</small></td>
+        <td>
+          <div style="font-family:'Noto Sans TC';font-size:1.3rem">是 shì (Adalah)</div>
+          <div style="font-family:'Noto Sans TC'">去 qù (Pergi)</div>
+          <div style="font-family:'Noto Sans TC'">要 yào (Mau)</div>
+        </td>
+        <td><button class="speak-btn" onclick="speak('是,去,要')">🔊</button></td>
+      </tr>
+      <tr class="tone-row-5">
+        <td><span class="tone-badge t5">Nada 5</span></td>
+        <td><span class="tone-mark" style="color:var(--tone5)">a</span> (netral)</td>
+        <td>Ringan dan pendek, tidak memiliki nada khusus<br><small style="color:var(--gray)">Biasanya di akhir kalimat</small></td>
+        <td>
+          <div style="font-family:'Noto Sans TC';font-size:1.3rem">嗎 ma (Partikel ?)</div>
+          <div style="font-family:'Noto Sans TC'">呢 ne (Bagaimana?)</div>
+          <div style="font-family:'Noto Sans TC'">啊 a (Partikel)</div>
+        </td>
+        <td><button class="speak-btn" onclick="speak('嗎,呢,啊')">🔊</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);margin-top:24px">
+    <h3 style="font-weight:800;margin-bottom:16px">🎯 Latihan Nada – Klik untuk Dengar</h3>
+    <p style="margin-bottom:16px;color:var(--gray)">Pasangan kata dengan hanzi mirip tapi nada berbeda!</p>
+    <div id="tonePairs" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px"></div>
+  </div>
+</div>
+
+<!-- ======= MEMORY GAME ======= -->
+<div class="page" id="page-memory">
+  <div class="page-title">🎮 Memory Match</div>
+  <p class="page-sub">Cocokkan hanzi dengan artinya! Latih ingatan visual karakter!</p>
+  
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;align-items:center">
+    <select id="memChapter" style="padding:8px 16px;border-radius:50px;border:2px solid var(--border);font-family:'Nunito';font-weight:700">
+      <option value="all">Semua Bab</option>
+      <option value="1">Bab 1</option><option value="2">Bab 2</option>
+      <option value="3">Bab 3</option><option value="4">Bab 4</option>
+      <option value="6">Bab 6</option><option value="7">Bab 7</option>
+    </select>
+    <button class="btn btn-primary" onclick="startMemory()">▶ Mulai Game</button>
+    <div style="background:white;padding:8px 20px;border-radius:50px;box-shadow:var(--shadow);font-weight:800">
+      ⏱ <span id="memTimer">0</span>s &nbsp;|&nbsp; 🔄 <span id="memMoves">0</span> Langkah
+    </div>
+  </div>
+  
+  <div class="memory-grid" id="memoryGrid">
+    <div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--gray)">
+      <div style="font-size:3rem">🎮</div>
+      <p style="font-weight:700;margin-top:12px">Klik ▶ Mulai Game untuk bermain!</p>
+    </div>
+  </div>
+</div>
+
+<!-- ======= DIALOGUE PAGE ======= -->
+<div class="page" id="page-dialogue">
+  <div class="page-title">💬 Percakapan & Dialog</div>
+  <p class="page-sub">Dialog nyata dari setiap bab dengan terjemahan lengkap</p>
+  <div id="dialogueContent"></div>
+</div>
+
+<!-- ======= CLASSIFIERS PAGE ======= -->
+<div class="page" id="page-classifiers">
+  <div class="page-title">🔢 Kata Satuan (量詞 Liàngcí)</div>
+  <p class="page-sub">Kata satuan adalah WAJIB dalam bahasa Mandarin – tidak bisa dihilangkan!</p>
+  
+  <div style="background:linear-gradient(135deg,#ff6b6b22,#feca5722);border:2px solid var(--primary2);border-radius:var(--radius);padding:20px;margin-bottom:24px">
+    <h3 style="font-weight:800;margin-bottom:8px">📌 Rumus Penggunaan</h3>
+    <div class="formula-box">數字 (Angka) + 量詞 (Kata Satuan) + 名詞 (Kata Benda)</div>
+    <p style="font-size:0.9rem;color:var(--gray)">Contoh: <span style="font-family:'Noto Sans TC';font-size:1.1rem">三 本 書</span> = sān běn shū = tiga buah buku</p>
+  </div>
+
+  <table class="clf-table">
+    <thead><tr><th>量詞</th><th>Pinyin</th><th>Digunakan untuk</th><th>Contoh</th><th>Suara</th></tr></thead>
+    <tbody id="classifierTable"></tbody>
+  </table>
+</div>
+
+<script>
+// ===================== DATA =====================
+const VOCAB = [
+  // BAB 1 - 新同學
+  {h:'新',p:'xīn',m:'Baru',pos:'Vs',ch:'1',t:1,ex:'新同學 (teman baru)'},
+  {h:'同學',p:'tóng xué',m:'Teman sekolah',pos:'N',ch:'1',t:2,ex:'他們是同學 (mereka teman sekelas)'},
+  {h:'他',p:'tā',m:'Dia (laki-laki)',pos:'N',ch:'1',t:1,ex:'他是學生 (dia murid)'},
+  {h:'她',p:'tā',m:'Dia (perempuan)',pos:'N',ch:'1',t:1,ex:'她很漂亮 (dia cantik)'},
+  {h:'誰',p:'shéi',m:'Siapa',pos:'N',ch:'1',t:2,ex:'他是誰? (dia siapa?)'},
+  {h:'叫',p:'jiào',m:'Bernama',pos:'Vst',ch:'1',t:4,ex:'我叫小明 (nama saya Xiaoming)'},
+  {h:'很',p:'hěn',m:'Sangat',pos:'Adv',ch:'1',t:3,ex:'他很忙 (dia sangat sibuk)'},
+  {h:'是',p:'shì',m:'Adalah / Iya',pos:'Vst',ch:'1',t:4,ex:'我是學生 (saya adalah murid)'},
+  {h:'什麼',p:'shén me',m:'Apa',pos:'N',ch:'1',t:2,ex:'你叫什麼名字? (siapa namamu?)'},
+  {h:'名字',p:'míng zì',m:'Nama',pos:'N',ch:'1',t:2,ex:'你的名字是什麼?'},
+  {h:'姓',p:'xìng',m:'Marga/Bermarga',pos:'Vst',ch:'1',t:4,ex:'我姓王 (marga saya Wang)'},
+  {h:'請問',p:'qǐng wèn',m:'Permisi / Boleh tanya',pos:'V',ch:'1',t:3,ex:'請問你叫什麼名字?'},
+  {h:'喜歡',p:'xǐ huān',m:'Suka',pos:'Vst',ch:'1',t:3,ex:'我喜歡台灣 (saya suka Taiwan)'},
+  {h:'呢',p:'ne',m:'Bagaimana dengan...?',pos:'Ptc',ch:'1',t:5,ex:'我是印尼人，你呢? (saya orang Indo, kamu?)'},
+  {h:'可愛',p:'kě ài',m:'Imut / Lucu',pos:'Vs',ch:'1',t:3,ex:'她很可愛 (dia sangat imut)'},
+  {h:'漂亮',p:'piào liang',m:'Cantik',pos:'Vs',ch:'1',t:4,ex:'她很漂亮 (dia sangat cantik)'},
+  {h:'帥',p:'shuài',m:'Ganteng',pos:'Vs',ch:'1',t:4,ex:'他很帥 (dia ganteng)'},
+  {h:'忙',p:'máng',m:'Sibuk',pos:'Vs',ch:'1',t:2,ex:'老師很忙 (guru sangat sibuk)'},
+  {h:'累',p:'lèi',m:'Lelah / Capek',pos:'Vs',ch:'1',t:4,ex:'我很累 (saya sangat lelah)'},
+  {h:'知道',p:'zhī dào',m:'Tahu',pos:'Vst',ch:'1',t:1,ex:'我知道 (saya tahu)'},
+  {h:'嗎',p:'ma',m:'Partikel tanya (ya/tidak)',pos:'Ptc',ch:'1',t:5,ex:'你是學生嗎? (apakah kamu murid?)'},
+  {h:'也',p:'yě',m:'Juga',pos:'Adv',ch:'1',t:3,ex:'我也是印尼人 (saya juga orang Indonesia)'},
+  {h:'認識',p:'rèn shí',m:'Mengenal',pos:'Vst',ch:'1',t:4,ex:'我認識他 (saya mengenal dia)'},
+  {h:'朋友',p:'péng yǒu',m:'Teman',pos:'N',ch:'1',t:2,ex:'他是我的朋友 (dia temanku)'},
+  {h:'老師',p:'lǎo shī',m:'Guru',pos:'N',ch:'1',t:3,ex:'她是老師 (dia guru)'},
+  {h:'學生',p:'xué shēng',m:'Murid',pos:'N',ch:'1',t:2,ex:'我是學生 (saya murid)'},
+  {h:'學校',p:'xué xiào',m:'Sekolah',pos:'N',ch:'1',t:2,ex:'她在學校 (dia di sekolah)'},
+  // Negara
+  {h:'印尼',p:'yìn ní',m:'Indonesia',pos:'N',ch:'1',t:4,ex:'我是印尼人 (saya orang Indonesia)'},
+  {h:'台灣',p:'tái wān',m:'Taiwan',pos:'N',ch:'1',t:2,ex:'我喜歡台灣 (saya suka Taiwan)'},
+  {h:'日本',p:'rì běn',m:'Jepang',pos:'N',ch:'1',t:4,ex:'她是日本人 (dia orang Jepang)'},
+  {h:'美國',p:'měi guó',m:'Amerika',pos:'N',ch:'1',t:3,ex:'他是美國人 (dia orang Amerika)'},
+  {h:'英國',p:'yīng guó',m:'Inggris',pos:'N',ch:'1',t:1,ex:'她是英國人 (dia orang Inggris)'},
+  {h:'中國',p:'zhōng guó',m:'China',pos:'N',ch:'1',t:1,ex:'他是中國人 (dia orang China)'},
+  // Buah
+  {h:'蘋果',p:'píng guǒ',m:'Apel',pos:'N',ch:'1',t:2,ex:'我喜歡吃蘋果 (saya suka makan apel)'},
+  {h:'芒果',p:'máng guǒ',m:'Mangga',pos:'N',ch:'1',t:2,ex:'芒果很甜 (mangga sangat manis)'},
+  {h:'草莓',p:'cǎo méi',m:'Stroberi',pos:'N',ch:'1',t:3,ex:'草莓很酸 (stroberi sangat asam)'},
+  {h:'葡萄',p:'pú táo',m:'Anggur',pos:'N',ch:'1',t:2,ex:'我喜歡葡萄 (saya suka anggur)'},
+  // Minuman
+  {h:'水',p:'shuǐ',m:'Air',pos:'N',ch:'1',t:3,ex:'我想喝水 (saya mau minum air)'},
+  {h:'茶',p:'chá',m:'Teh',pos:'N',ch:'1',t:2,ex:'你要喝茶嗎? (mau minum teh?)'},
+  {h:'咖啡',p:'kā fēi',m:'Kopi',pos:'N',ch:'1',t:1,ex:'我喝咖啡 (saya minum kopi)'},
+  {h:'牛奶',p:'niú nǎi',m:'Susu',pos:'N',ch:'1',t:2,ex:'我愛喝牛奶 (saya suka minum susu)'},
+  {h:'珍珠奶茶',p:'zhēn zhū nǎi chá',m:'Boba / Milk Tea',pos:'N',ch:'1',t:1,ex:'我喜歡珍珠奶茶 (saya suka boba)'},
+  {h:'果汁',p:'guǒ zhī',m:'Jus buah',pos:'N',ch:'1',t:3,ex:'我要一杯果汁 (saya mau segelas jus)'},
+  {h:'啤酒',p:'pí jiǔ',m:'Bir',pos:'N',ch:'1',t:2,ex:'我不喝啤酒 (saya tidak minum bir)'},
+  // Keluarga
+  {h:'爸爸',p:'bà ba',m:'Ayah',pos:'N',ch:'1',t:4,ex:'我爸爸很高 (ayah saya tinggi)'},
+  {h:'媽媽',p:'mā ma',m:'Ibu',pos:'N',ch:'1',t:1,ex:'媽媽很忙 (ibu sangat sibuk)'},
+  {h:'哥哥',p:'gē ge',m:'Kakak laki-laki',pos:'N',ch:'1',t:1,ex:'我哥哥很帥 (kakak laki-laki saya ganteng)'},
+  {h:'姐姐',p:'jiě jie',m:'Kakak perempuan',pos:'N',ch:'1',t:3,ex:'她是我的姐姐 (dia kakak perempuan saya)'},
+  {h:'弟弟',p:'dì di',m:'Adik laki-laki',pos:'N',ch:'1',t:4,ex:'弟弟很可愛 (adik laki-laki saya imut)'},
+  {h:'妹妹',p:'mèi mei',m:'Adik perempuan',pos:'N',ch:'1',t:4,ex:'妹妹很漂亮 (adik perempuan saya cantik)'},
+  
+  // BAB 2 - 你幾點去學校
+  {h:'有',p:'yǒu',m:'Ada / Punya',pos:'Vst',ch:'2',t:3,ex:'我有手機 (saya punya HP)'},
+  {h:'沒有',p:'méi yǒu',m:'Tidak ada / Tidak punya',pos:'Adv',ch:'2',t:2,ex:'我沒有時間 (saya tidak punya waktu)'},
+  {h:'課',p:'kè',m:'Pelajaran / Kelas',pos:'N',ch:'2',t:4,ex:'我有漢語課 (saya ada kelas Mandarin)'},
+  {h:'回家',p:'huí jiā',m:'Pulang ke rumah',pos:'V',ch:'2',t:2,ex:'我八點回家 (saya pulang jam 8)'},
+  {h:'上課',p:'shàng kè',m:'Masuk kelas / Mulai belajar',pos:'V',ch:'2',t:4,ex:'我九點上課 (saya masuk kelas jam 9)'},
+  {h:'下課',p:'xià kè',m:'Selesai kelas',pos:'V',ch:'2',t:4,ex:'我五點下課 (saya selesai jam 5)'},
+  {h:'圖書館',p:'tú shū guǎn',m:'Perpustakaan',pos:'N',ch:'2',t:2,ex:'我去圖書館看書 (saya ke perpustakaan baca buku)'},
+  {h:'去',p:'qù',m:'Pergi ke',pos:'V',ch:'2',t:4,ex:'你去哪兒? (kamu pergi ke mana?)'},
+  {h:'週末',p:'zhōu mò',m:'Akhir pekan',pos:'N',ch:'2',t:1,ex:'週末我在家休息 (akhir pekan saya istirahat di rumah)'},
+  {h:'要',p:'yào',m:'Mau / Akan',pos:'Vaux',ch:'2',t:4,ex:'我要去學校 (saya mau pergi ke sekolah)'},
+  {h:'來',p:'lái',m:'Datang',pos:'V',ch:'2',t:2,ex:'你來我家 (kamu datang ke rumahku)'},
+  {h:'生日',p:'shēng rì',m:'Ulang tahun',pos:'N',ch:'2',t:1,ex:'今天是我的生日 (hari ini ulang tahun saya)'},
+  {h:'快樂',p:'kuài lè',m:'Bahagia / Selamat',pos:'Vs',ch:'2',t:4,ex:'生日快樂! (selamat ulang tahun!)'},
+  {h:'做',p:'zuò',m:'Melakukan / Membuat',pos:'V',ch:'2',t:4,ex:'她在做飯 (dia sedang masak)'},
+  {h:'做飯',p:'zuò fàn',m:'Memasak',pos:'V',ch:'2',t:4,ex:'媽媽做飯 (ibu memasak)'},
+  {h:'吃飯',p:'chī fàn',m:'Makan',pos:'V',ch:'2',t:1,ex:'我們去吃飯吧 (ayo kita makan)'},
+  {h:'歲',p:'suì',m:'Tahun (usia)',pos:'M',ch:'2',t:4,ex:'我二十歲 (saya 20 tahun)'},
+  {h:'起床',p:'qǐ chuáng',m:'Bangun tidur',pos:'Vp',ch:'2',t:3,ex:'我六點起床 (saya bangun jam 6)'},
+  {h:'睡覺',p:'shuì jiào',m:'Tidur',pos:'V',ch:'2',t:4,ex:'我十點睡覺 (saya tidur jam 10)'},
+  {h:'刷牙',p:'shuā yá',m:'Sikat gigi',pos:'V',ch:'2',t:1,ex:'你刷牙了嗎? (sudah sikat gigi?)'},
+  {h:'休息',p:'xiū xí',m:'Istirahat',pos:'V',ch:'2',t:1,ex:'我想休息 (saya mau istirahat)'},
+  {h:'工作',p:'gōng zuò',m:'Bekerja / Pekerjaan',pos:'V/N',ch:'2',t:1,ex:'他在工作 (dia sedang bekerja)'},
+  {h:'正在',p:'zhèng zài',m:'Sedang (dalam proses)',pos:'Adv',ch:'2',t:4,ex:'她正在睡覺 (dia sedang tidur)'},
+  // Waktu
+  {h:'早上',p:'zǎo shang',m:'Pagi hari (06:00-08:00)',pos:'N',ch:'2',t:3,ex:'早上好! (selamat pagi!)'},
+  {h:'上午',p:'shàng wǔ',m:'Pagi-siang (08:00-11:00)',pos:'N',ch:'2',t:4,ex:'上午我有課 (pagi saya ada kelas)'},
+  {h:'中午',p:'zhōng wǔ',m:'Siang hari (11:00-13:00)',pos:'N',ch:'2',t:1,ex:'中午我吃飯 (siang saya makan)'},
+  {h:'下午',p:'xià wǔ',m:'Sore hari (13:00-17:00)',pos:'N',ch:'2',t:4,ex:'下午我去圖書館 (sore saya ke perpustakaan)'},
+  {h:'晚上',p:'wǎn shàng',m:'Malam hari (setelah 19:00)',pos:'N',ch:'2',t:3,ex:'晚上我睡覺 (malam saya tidur)'},
+  {h:'今天',p:'jīn tiān',m:'Hari ini',pos:'N',ch:'2',t:1,ex:'今天是星期一 (hari ini Senin)'},
+  {h:'明天',p:'míng tiān',m:'Besok',pos:'N',ch:'2',t:2,ex:'明天我去學校 (besok saya ke sekolah)'},
+  {h:'昨天',p:'zuó tiān',m:'Kemarin',pos:'N',ch:'2',t:2,ex:'昨天我很累 (kemarin saya sangat lelah)'},
+  {h:'現在',p:'xiàn zài',m:'Sekarang',pos:'N',ch:'2',t:4,ex:'現在幾點? (sekarang jam berapa?)'},
+  
+  // BAB 3 - 買生日禮物
+  {h:'買',p:'mǎi',m:'Membeli',pos:'V',ch:'3',t:3,ex:'我要買書 (saya mau beli buku)'},
+  {h:'賣',p:'mài',m:'Menjual',pos:'V',ch:'3',t:4,ex:'她賣衣服 (dia menjual baju)'},
+  {h:'禮物',p:'lǐ wù',m:'Hadiah / Kado',pos:'N',ch:'3',t:3,ex:'這是你的禮物 (ini hadiahmu)'},
+  {h:'想',p:'xiǎng',m:'Ingin / Memikirkan',pos:'Vaux',ch:'3',t:3,ex:'我想買衣服 (saya ingin beli baju)'},
+  {h:'送',p:'sòng',m:'Memberi hadiah / Mengantar',pos:'V',ch:'3',t:4,ex:'我送她禮物 (saya memberi hadiah kepadanya)'},
+  {h:'看',p:'kàn',m:'Melihat / Membaca',pos:'V',ch:'3',t:4,ex:'我看書 (saya membaca buku)'},
+  {h:'一些',p:'yī xiē',m:'Beberapa / Sebagian',pos:'Det',ch:'3',t:1,ex:'我買一些書 (saya beli beberapa buku)'},
+  {h:'一起',p:'yī qǐ',m:'Bersama-sama',pos:'Adv',ch:'3',t:1,ex:'我們一起去 (kita pergi bersama)'},
+  {h:'和',p:'hé',m:'Dan / Dengan',pos:'Conj',ch:'3',t:2,ex:'我和你 (saya dan kamu)'},
+  {h:'大',p:'dà',m:'Besar',pos:'Vs',ch:'3',t:4,ex:'這個很大 (ini sangat besar)'},
+  {h:'小',p:'xiǎo',m:'Kecil',pos:'Vs',ch:'3',t:3,ex:'那個很小 (itu sangat kecil)'},
+  {h:'這',p:'zhè',m:'Ini',pos:'Det',ch:'3',t:4,ex:'這是我的書 (ini buku saya)'},
+  {h:'那',p:'nà',m:'Itu',pos:'Det',ch:'3',t:4,ex:'那是她的 (itu punyanya)'},
+  {h:'哪',p:'nǎ',m:'Mana / Yang mana',pos:'Det',ch:'3',t:3,ex:'你要哪個? (kamu mau yang mana?)'},
+  {h:'種',p:'zhǒng',m:'Jenis / Macam',pos:'M',ch:'3',t:3,ex:'你喜歡哪種茶? (kamu suka jenis teh apa?)'},
+  {h:'怎麼樣',p:'zěn me yàng',m:'Bagaimana',pos:'Vs',ch:'3',t:3,ex:'這件衣服怎麼樣? (baju ini bagaimana?)'},
+  {h:'東西',p:'dōng xī',m:'Barang / Sesuatu',pos:'N',ch:'3',t:1,ex:'你買什麼東西? (kamu beli apa?)'},
+  {h:'錢',p:'qián',m:'Uang',pos:'N',ch:'3',t:2,ex:'多少錢? (berapa harganya?)'},
+  {h:'塊',p:'kuài',m:'Yuan (mata uang)',pos:'M',ch:'3',t:4,ex:'一百塊 (seratus yuan)'},
+  {h:'便宜',p:'pián yí',m:'Murah',pos:'Vs',ch:'3',t:2,ex:'這件衣服很便宜 (baju ini sangat murah)'},
+  {h:'貴',p:'guì',m:'Mahal',pos:'Vs',ch:'3',t:4,ex:'這很貴 (ini sangat mahal)'},
+  {h:'都',p:'dōu',m:'Semua / Semuanya',pos:'Adv',ch:'3',t:1,ex:'我們都喜歡 (kita semua suka)'},
+  {h:'常常',p:'cháng cháng',m:'Sering',pos:'Adv',ch:'3',t:2,ex:'她常常來這裡 (dia sering ke sini)'},
+  // Pakaian
+  {h:'衣服',p:'yī fú',m:'Pakaian / Baju',pos:'N',ch:'3',t:1,ex:'她穿紅色衣服 (dia memakai baju merah)'},
+  {h:'穿',p:'chuān',m:'Memakai (pakaian)',pos:'V',ch:'3',t:1,ex:'你穿什麼衣服? (kamu pakai baju apa?)'},
+  {h:'T恤',p:'T xù',m:'Kaos',pos:'N',ch:'3',t:4,ex:'我有七件T恤 (saya punya 7 kaos)'},
+  {h:'襯衫',p:'chèn shān',m:'Kemeja',pos:'N',ch:'3',t:4,ex:'他穿白色襯衫 (dia pakai kemeja putih)'},
+  {h:'外套',p:'wài tào',m:'Jaket',pos:'N',ch:'3',t:4,ex:'今天冷，穿外套吧 (dingin, pakai jaket saja)'},
+  {h:'短褲',p:'duǎn kù',m:'Celana pendek',pos:'N',ch:'3',t:3,ex:'他穿短褲 (dia pakai celana pendek)'},
+  {h:'長褲',p:'cháng kù',m:'Celana panjang',pos:'N',ch:'3',t:2,ex:'我穿長褲 (saya pakai celana panjang)'},
+  {h:'裙子',p:'qún zi',m:'Rok',pos:'N',ch:'3',t:2,ex:'她穿裙子很漂亮 (dia cantik pakai rok)'},
+  // Warna
+  {h:'紅色',p:'hóng sè',m:'Merah',pos:'Vs',ch:'3',t:2,ex:'我喜歡紅色 (saya suka warna merah)'},
+  {h:'藍色',p:'lán sè',m:'Biru',pos:'Vs',ch:'3',t:2,ex:'天空是藍色的 (langit berwarna biru)'},
+  {h:'綠色',p:'lǜ sè',m:'Hijau',pos:'Vs',ch:'3',t:4,ex:'草是綠色的 (rumput berwarna hijau)'},
+  {h:'黃色',p:'huáng sè',m:'Kuning',pos:'Vs',ch:'3',t:2,ex:'太陽是黃色的 (matahari berwarna kuning)'},
+  {h:'白色',p:'bái sè',m:'Putih',pos:'Vs',ch:'3',t:2,ex:'這件是白色的 (ini berwarna putih)'},
+  {h:'黑色',p:'hēi sè',m:'Hitam',pos:'Vs',ch:'3',t:1,ex:'他穿黑色衣服 (dia pakai baju hitam)'},
+  {h:'粉紅色',p:'fěn hóng sè',m:'Merah muda / Pink',pos:'Vs',ch:'3',t:3,ex:'她喜歡粉紅色 (dia suka pink)'},
+  {h:'好看',p:'hǎo kàn',m:'Bagus / Indah',pos:'Vs',ch:'3',t:3,ex:'這個很好看 (ini sangat bagus)'},
+  {h:'漂亮',p:'piào liang',m:'Cantik / Indah',pos:'Vs',ch:'3',t:4,ex:'這條裙子很漂亮 (rok ini sangat cantik)'},
+  // Makanan manis
+  {h:'蛋糕',p:'dàn gāo',m:'Kue (cake)',pos:'N',ch:'3',t:4,ex:'我買一個蛋糕 (saya beli satu kue)'},
+  {h:'甜點',p:'tián diǎn',m:'Dessert / Makanan manis',pos:'N',ch:'3',t:2,ex:'你喜歡吃甜點嗎? (suka dessert?)'},
+  {h:'開心',p:'kāi xīn',m:'Senang / Gembira',pos:'Vs',ch:'3',t:1,ex:'我很開心 (saya sangat senang)'},
+  {h:'玩',p:'wán',m:'Bermain / Main',pos:'V',ch:'3',t:2,ex:'我去同學家玩 (saya main ke rumah teman)'},
+  
+  // BAB 4 - 你要咖啡還是茶
+  {h:'天氣',p:'tiān qì',m:'Cuaca',pos:'N',ch:'4',t:1,ex:'今天天氣怎麼樣? (cuaca hari ini bagaimana?)'},
+  {h:'熱',p:'rè',m:'Panas',pos:'Vs',ch:'4',t:4,ex:'今天很熱 (hari ini sangat panas)'},
+  {h:'冷',p:'lěng',m:'Dingin',pos:'Vs',ch:'4',t:3,ex:'冬天很冷 (musim dingin sangat dingin)'},
+  {h:'涼快',p:'liáng kuai',m:'Sejuk / Segar',pos:'Vs',ch:'4',t:2,ex:'秋天很涼快 (musim gugur sangat sejuk)'},
+  {h:'下雨',p:'xià yǔ',m:'Hujan',pos:'V',ch:'4',t:4,ex:'今天下雨 (hari ini hujan)'},
+  {h:'晴天',p:'qíng tiān',m:'Hari cerah',pos:'N',ch:'4',t:2,ex:'今天是晴天 (hari ini cerah)'},
+  {h:'陰天',p:'yīn tiān',m:'Mendung',pos:'N',ch:'4',t:1,ex:'今天陰天 (hari ini mendung)'},
+  {h:'下雪',p:'xià xuě',m:'Turun salju',pos:'V',ch:'4',t:4,ex:'冬天下雪 (musim dingin turun salju)'},
+  {h:'春天',p:'chūn tiān',m:'Musim semi',pos:'N',ch:'4',t:1,ex:'春天很涼快 (musim semi sangat sejuk)'},
+  {h:'夏天',p:'xià tiān',m:'Musim panas',pos:'N',ch:'4',t:4,ex:'夏天很熱 (musim panas sangat panas)'},
+  {h:'秋天',p:'qiū tiān',m:'Musim gugur',pos:'N',ch:'4',t:1,ex:'秋天很涼快 (musim gugur sejuk)'},
+  {h:'冬天',p:'dōng tiān',m:'Musim dingin',pos:'N',ch:'4',t:1,ex:'冬天很冷 (musim dingin sangat dingin)'},
+  {h:'食物',p:'shí wù',m:'Makanan',pos:'N',ch:'4',t:2,ex:'你喜歡什麼食物? (suka makanan apa?)'},
+  {h:'餓',p:'è',m:'Lapar',pos:'Vs',ch:'4',t:4,ex:'我很餓 (saya sangat lapar)'},
+  {h:'渴',p:'kě',m:'Haus',pos:'Vs',ch:'4',t:3,ex:'我很渴 (saya sangat haus)'},
+  {h:'飽',p:'bǎo',m:'Kenyang',pos:'Vs',ch:'4',t:3,ex:'我吃飽了 (saya sudah kenyang)'},
+  {h:'還是',p:'hái shì',m:'Atau (pilihan)',pos:'Conj',ch:'4',t:2,ex:'你要茶還是咖啡? (mau teh atau kopi?)'},
+  {h:'一點兒',p:'yī diǎn er',m:'Sedikit',pos:'Det',ch:'4',t:1,ex:'我有一點兒餓 (saya sedikit lapar)'},
+  {h:'太…了',p:'tài...le',m:'Terlalu...',pos:'Adv',ch:'4',t:4,ex:'這個太貴了 (ini terlalu mahal)'},
+  {h:'最',p:'zuì',m:'Paling',pos:'Adv',ch:'4',t:4,ex:'我最喜歡芒果 (saya paling suka mangga)'},
+  {h:'餐廳',p:'cāntīng',m:'Restoran',pos:'N',ch:'4',t:1,ex:'我們去餐廳吃飯 (kita makan di restoran)'},
+  {h:'甜',p:'tián',m:'Manis',pos:'Vs',ch:'4',t:2,ex:'芒果很甜 (mangga sangat manis)'},
+  {h:'酸',p:'suān',m:'Asam',pos:'Vs',ch:'4',t:1,ex:'草莓有點酸 (stroberi sedikit asam)'},
+  {h:'辣',p:'là',m:'Pedas',pos:'Vs',ch:'4',t:4,ex:'我不喜歡吃辣的 (saya tidak suka pedas)'},
+  {h:'苦',p:'kǔ',m:'Pahit',pos:'Vs',ch:'4',t:3,ex:'咖啡有點苦 (kopi sedikit pahit)'},
+  {h:'鹹',p:'xián',m:'Asin',pos:'Vs',ch:'4',t:2,ex:'這個太鹹了 (ini terlalu asin)'},
+  {h:'好吃',p:'hǎo chī',m:'Enak / Lezat',pos:'Vs',ch:'4',t:3,ex:'這個很好吃 (ini sangat enak)'},
+  {h:'牛肉麵',p:'niú ròu miàn',m:'Mi sapi',pos:'N',ch:'4',t:2,ex:'台灣牛肉麵很有名 (mi sapi Taiwan sangat terkenal)'},
+  {h:'給',p:'gěi',m:'Memberi',pos:'V',ch:'4',t:3,ex:'給我一杯水 (berikan saya segelas air)'},
+  {h:'一共',p:'yī gòng',m:'Total / Semua berjumlah',pos:'Adv',ch:'4',t:1,ex:'一共多少錢? (totalnya berapa?)'},
+  {h:'每',p:'měi',m:'Setiap',pos:'Det',ch:'4',t:3,ex:'我每天喝牛奶 (saya minum susu setiap hari)'},
+  {h:'多',p:'duō',m:'Banyak / Lebih dari',pos:'Adv',ch:'4',t:1,ex:'他喝得很多 (dia minum sangat banyak)'},
+  
+  // BAB 6 - 週末去打網球吧
+  {h:'打球',p:'dǎ qiú',m:'Bermain bola',pos:'V',ch:'6',t:3,ex:'你會打球嗎? (bisa bermain bola?)'},
+  {h:'踢球',p:'tī qiú',m:'Menendang bola',pos:'V',ch:'6',t:1,ex:'我喜歡踢足球 (saya suka bermain sepak bola)'},
+  {h:'網球',p:'wǎng qiú',m:'Tenis lapangan',pos:'N',ch:'6',t:3,ex:'我會打網球 (saya bisa bermain tenis)'},
+  {h:'籃球',p:'lán qiú',m:'Basket',pos:'N',ch:'6',t:2,ex:'他打籃球打得很好 (dia bermain basket dengan bagus)'},
+  {h:'羽毛球',p:'yǔ máo qiú',m:'Badminton / Bulu tangkis',pos:'N',ch:'6',t:3,ex:'印尼人很會打羽毛球 (orang Indonesia sangat pandai badminton)'},
+  {h:'足球',p:'zú qiú',m:'Sepak bola',pos:'N',ch:'6',t:2,ex:'我去足球場踢足球 (saya pergi ke lapangan main bola)'},
+  {h:'乒乓球',p:'pīng pāng qiú',m:'Tenis meja / Ping pong',pos:'N',ch:'6',t:1,ex:'你會打乒乓球嗎?'},
+  {h:'棒球',p:'bàng qiú',m:'Baseball',pos:'N',ch:'6',t:4,ex:'他棒球打得很好 (dia bagus bermain baseball)'},
+  {h:'游泳',p:'yóu yǒng',m:'Berenang',pos:'V',ch:'6',t:2,ex:'我會游泳 (saya bisa berenang)'},
+  {h:'跑步',p:'pǎo bù',m:'Lari / Jogging',pos:'V',ch:'6',t:3,ex:'我每天跑步 (saya jogging setiap hari)'},
+  {h:'爬山',p:'pá shān',m:'Mendaki gunung',pos:'V',ch:'6',t:2,ex:'週末我們去爬山 (akhir pekan kita mendaki gunung)'},
+  {h:'會',p:'huì',m:'Bisa (kemampuan) / Akan',pos:'Vaux',ch:'6',t:4,ex:'我會說中文 (saya bisa berbicara Mandarin)'},
+  {h:'得',p:'dé',m:'Partikel hasil (seberapa baik)',pos:'Ptc',ch:'6',t:2,ex:'她跑得很快 (dia lari sangat cepat)'},
+  {h:'快',p:'kuài',m:'Cepat',pos:'Vs',ch:'6',t:4,ex:'他跑得很快 (dia berlari sangat cepat)'},
+  {h:'慢',p:'màn',m:'Lambat',pos:'Vs',ch:'6',t:4,ex:'我跑得很慢 (saya berlari sangat lambat)'},
+  {h:'海邊',p:'hǎi biān',m:'Pantai / Tepi laut',pos:'N',ch:'6',t:3,ex:'我喜歡去海邊 (saya suka pergi ke pantai)'},
+  {h:'山',p:'shān',m:'Gunung',pos:'N',ch:'6',t:1,ex:'山的風景很漂亮 (pemandangan gunung sangat indah)'},
+  {h:'風景',p:'fēng jǐng',m:'Pemandangan',pos:'N',ch:'6',t:1,ex:'這裡的風景很好 (pemandangan di sini sangat bagus)'},
+  {h:'唱歌',p:'chàng gē',m:'Bernyanyi',pos:'V',ch:'6',t:4,ex:'他唱歌唱得很好 (dia menyanyi dengan bagus)'},
+  {h:'跳舞',p:'tiào wǔ',m:'Menari',pos:'V',ch:'6',t:4,ex:'她會跳舞 (dia bisa menari)'},
+  {h:'畫畫',p:'huà huà',m:'Menggambar',pos:'V',ch:'6',t:4,ex:'我喜歡畫畫 (saya suka menggambar)'},
+  {h:'興趣',p:'xìng qù',m:'Minat / Hobi',pos:'N',ch:'6',t:4,ex:'你的興趣是什麼? (apa hobimu?)'},
+  {h:'比賽',p:'bǐ sài',m:'Pertandingan / Lomba',pos:'N',ch:'6',t:3,ex:'明天有籃球比賽 (besok ada pertandingan basket)'},
+  {h:'高興',p:'gāo xìng',m:'Senang / Gembira',pos:'Vs',ch:'6',t:1,ex:'我很高興 (saya sangat senang)'},
+  {h:'有趣',p:'yǒu qù',m:'Menarik / Seru',pos:'Vs',ch:'6',t:3,ex:'這部電影很有趣 (film ini sangat menarik)'},
+  {h:'可以',p:'kě yǐ',m:'Boleh / Bisa',pos:'Vaux',ch:'6',t:3,ex:'我可以去嗎? (boleh saya pergi?)'},
+  {h:'應該',p:'yīng gāi',m:'Seharusnya',pos:'Vaux',ch:'6',t:1,ex:'你應該去運動 (kamu seharusnya berolahraga)'},
+  {h:'比',p:'bǐ',m:'Membandingkan / Dibanding',pos:'V',ch:'6',t:3,ex:'她比我高 (dia lebih tinggi dari saya)'},
+  {h:'平常',p:'píng cháng',m:'Biasanya',pos:'Adv',ch:'6',t:2,ex:'我平常七點起床 (biasanya saya bangun jam 7)'},
+  {h:'有時候',p:'yǒu shí hòu',m:'Kadang-kadang',pos:'Adv',ch:'6',t:3,ex:'我有時候去游泳 (saya kadang-kadang berenang)'},
+  {h:'電影',p:'diàn yǐng',m:'Film',pos:'N',ch:'6',t:4,ex:'我喜歡看電影 (saya suka nonton film)'},
+  {h:'電影院',p:'diàn yǐng yuàn',m:'Bioskop',pos:'N',ch:'6',t:4,ex:'我們去電影院 (kita pergi ke bioskop)'},
+  {h:'運動',p:'yùn dòng',m:'Olahraga',pos:'N/V',ch:'6',t:4,ex:'你喜歡什麼運動? (suka olahraga apa?)'},
+  {h:'騎腳踏車',p:'qí jiǎo tà chē',m:'Naik sepeda',pos:'V',ch:'6',t:2,ex:'我們去騎腳踏車 (kita pergi naik sepeda)'},
+  
+  // BAB 7 - 怎麼到飯店去
+  {h:'飯店',p:'fàn diàn',m:'Hotel / Restoran',pos:'N',ch:'7',t:4,ex:'我住在飯店 (saya tinggal di hotel)'},
+  {h:'旅館',p:'lǚ guǎn',m:'Penginapan / Hotel',pos:'N',ch:'7',t:3,ex:'那家旅館很便宜 (penginapan itu sangat murah)'},
+  {h:'地圖',p:'dì tú',m:'Peta',pos:'N',ch:'7',t:4,ex:'我看地圖 (saya melihat peta)'},
+  {h:'遠',p:'yuǎn',m:'Jauh',pos:'Vs',ch:'7',t:3,ex:'你家離學校遠嗎? (rumahmu jauh dari sekolah?)'},
+  {h:'近',p:'jìn',m:'Dekat',pos:'Vs',ch:'7',t:4,ex:'超市離這裡很近 (supermarket sangat dekat dari sini)'},
+  {h:'等',p:'děng',m:'Menunggu',pos:'V',ch:'7',t:3,ex:'我等你 (saya menunggumu)'},
+  {h:'走路',p:'zǒu lù',m:'Jalan kaki',pos:'V',ch:'7',t:3,ex:'我走路去學校 (saya jalan kaki ke sekolah)'},
+  {h:'從',p:'cóng',m:'Dari (titik awal)',pos:'Prep',ch:'7',t:2,ex:'從學校到飯店 (dari sekolah ke hotel)'},
+  {h:'到',p:'dào',m:'Ke / Sampai / Tiba',pos:'V',ch:'7',t:4,ex:'我們到了 (kita sudah tiba)'},
+  {h:'先',p:'xiān',m:'Terlebih dahulu / Dulu',pos:'Adv',ch:'7',t:1,ex:'我先去吃飯 (saya makan dulu)'},
+  {h:'怎麼',p:'zěn me',m:'Bagaimana (cara)',pos:'Adv',ch:'7',t:3,ex:'怎麼走? (bagaimana cara jalannya?)'},
+  {h:'捷運',p:'jié yùn',m:'MRT / Kereta bawah tanah',pos:'N',ch:'7',t:2,ex:'我坐捷運去 (saya naik MRT pergi)'},
+  {h:'公車',p:'gōng chē',m:'Bus kota',pos:'N',ch:'7',t:1,ex:'我坐公車回家 (saya naik bus pulang)'},
+  {h:'開車',p:'kāi chē',m:'Mengemudi / Naik mobil',pos:'V',ch:'7',t:1,ex:'爸爸開車去上班 (ayah mengemudi ke kantor)'},
+  {h:'坐',p:'zuò',m:'Duduk / Naik (kendaraan)',pos:'V',ch:'7',t:4,ex:'我坐捷運 (saya naik MRT)'},
+  {h:'方便',p:'fāng biàn',m:'Nyaman / Mudah / Praktis',pos:'Vs',ch:'7',t:1,ex:'坐捷運很方便 (naik MRT sangat praktis)'},
+  {h:'機場',p:'jī chǎng',m:'Bandara',pos:'N',ch:'7',t:1,ex:'我去機場 (saya pergi ke bandara)'},
+  {h:'附近',p:'fù jìn',m:'Dekat / Sekitar',pos:'N',ch:'7',t:4,ex:'學校附近有餐廳 (dekat sekolah ada restoran)'},
+  {h:'大概',p:'dà gài',m:'Kira-kira / Sekitar',pos:'Adv',ch:'7',t:4,ex:'大概要走十分鐘 (kira-kira butuh 10 menit jalan)'},
+  {h:'聽說',p:'tīng shuō',m:'Dengar-dengar / Katanya',pos:'V',ch:'7',t:1,ex:'聽說那家飯店很好 (katanya hotel itu bagus)'},
+];
+
+const CHAPTERS = [
+  {num:'1', title:'Teman Baru', hanzi:'新同學', color:'#ff6b6b', desc:'Perkenalan diri, nama, asal negara, suka/tidak suka'},
+  {num:'2', title:'Jam ke Sekolah', hanzi:'你幾點去學校', color:'#feca57', desc:'Waktu, jadwal harian, kegiatan sehari-hari'},
+  {num:'3', title:'Beli Hadiah Ultah', hanzi:'買生日禮物', color:'#48dbfb', desc:'Belanja, pakaian, warna, kata satuan, kata bantu'},
+  {num:'4', title:'Kopi atau Teh?', hanzi:'你要咖啡還是茶', color:'#1dd1a1', desc:'Cuaca, musim, makanan, rasa, harga & transaksi'},
+  {num:'6', title:'Akhir Pekan Tenis', hanzi:'週末去打網球吧', color:'#fd79a8', desc:'Olahraga, hobi, kemampuan, kecepatan, membandingkan'},
+  {num:'7', title:'Cara ke Hotel', hanzi:'怎麼到飯店去', color:'#a29bfe', desc:'Transportasi, arah, jarak, cara menuju tempat'},
+];
+
+const GRAMMAR = [
+  {ch:'Bab 1', title:'N + 是 + N (Identitas)', formula:'Subjek + 是 (shì) + Identitas',
+   examples:[
+     {h:'她是老師。',p:'Tā shì lǎo shī.',id:'Dia adalah guru.'},
+     {h:'我是印尼人。',p:'Wǒ shì yìn ní rén.',id:'Saya adalah orang Indonesia.'},
+     {h:'他是新同學。',p:'Tā shì xīn tóng xué.',id:'Dia adalah teman baru.'},
+   ], note:'Negasi: 不是 (bù shì) = bukan. Contoh: 他不是學生 (dia bukan murid)'},
+  {ch:'Bab 1', title:'N + 叫/姓 + N (Nama/Marga)', formula:'Subjek + 叫(jiào)/姓(xìng) + Nama',
+   examples:[
+     {h:'我叫小明。',p:'Wǒ jiào Xiǎo Míng.',id:'Nama saya Xiaoming.'},
+     {h:'他姓王。',p:'Tā xìng Wáng.',id:'Marganya Wang.'},
+     {h:'你叫什麼名字？',p:'Nǐ jiào shén me míng zì?',id:'Siapa namamu?'},
+   ], note:'叫 untuk nama lengkap/nama panggilan | 姓 hanya untuk marga'},
+  {ch:'Bab 1', title:'N + 是 + 哪國人 (Kewarganegaraan)', formula:'Subjek + 是 + [Negara] + 人',
+   examples:[
+     {h:'你是哪國人？',p:'Nǐ shì nǎ guó rén?',id:'Kamu orang negara mana?'},
+     {h:'我是印尼人。',p:'Wǒ shì Yìn ní rén.',id:'Saya orang Indonesia.'},
+     {h:'她是日本人。',p:'Tā shì Rì běn rén.',id:'Dia orang Jepang.'},
+   ], note:'[Negara] + 人 = orang [negara]. Taiwan → 台灣人 | Jepang → 日本人'},
+  {ch:'Bab 1', title:'N + 很 + Vs (Sifat)', formula:'Subjek + 很 (hěn) + Kata Sifat',
+   examples:[
+     {h:'她很漂亮。',p:'Tā hěn piào liang.',id:'Dia sangat cantik.'},
+     {h:'老師很忙。',p:'Lǎo shī hěn máng.',id:'Guru sangat sibuk.'},
+     {h:'我很累。',p:'Wǒ hěn lèi.',id:'Saya sangat lelah.'},
+   ], note:'Dalam kalimat biasa, 很 WAJIB ada sebelum kata sifat (bukan benar-benar "sangat", tapi rumus dasar). Negasi: 不 (bù) + Vs → 他不忙 (dia tidak sibuk)'},
+  {ch:'Bab 1', title:'...嗎? (Pertanyaan Ya/Tidak)', formula:'Kalimat pernyataan + 嗎 (ma) + ?',
+   examples:[
+     {h:'你是學生嗎？',p:'Nǐ shì xué shēng ma?',id:'Apakah kamu murid?'},
+     {h:'她忙嗎？',p:'Tā máng ma?',id:'Apakah dia sibuk?'},
+     {h:'你喜歡台灣嗎？',p:'Nǐ xǐ huān Tái wān ma?',id:'Apakah kamu suka Taiwan?'},
+   ], note:'Jawab YA: 是/對 (shì/duì). Jawab TIDAK: 不是/不 (bù shì/bù)'},
+  {ch:'Bab 1', title:'...呢? (Bagaimana dengan...?)', formula:'[Pernyataan diri sendiri] + [Subjek] + 呢 (ne)?',
+   examples:[
+     {h:'我是印尼人，你呢？',p:'Wǒ shì Yìn ní rén, nǐ ne?',id:'Saya orang Indonesia, kamu?'},
+     {h:'我叫Dina，你呢？',p:'Wǒ jiào Dina, nǐ ne?',id:'Nama saya Dina, kamu?'},
+   ], note:'呢 di akhir kalimat untuk menanyakan hal yang sama kepada lawan bicara'},
+  {ch:'Bab 2', title:'S + Time + V + O (Jadwal)', formula:'Subjek + Waktu + Kata Kerja (+ Objek)',
+   examples:[
+     {h:'我八點回家。',p:'Wǒ bā diǎn huí jiā.',id:'Saya pulang jam 8.'},
+     {h:'她早上六點起床。',p:'Tā zǎo shang liù diǎn qǐ chuáng.',id:'Dia bangun jam 6 pagi.'},
+     {h:'我們中午吃飯。',p:'Wǒ men zhōng wǔ chī fàn.',id:'Kita makan siang.'},
+   ], note:'Urutan: KAPAN dulu, baru KEGIATAN. Berbeda dengan Indonesia yang lebih fleksibel!'},
+  {ch:'Bab 2', title:'S + 有/沒有 + O (Punya/Ada)', formula:'Subjek + 有(yǒu) / 沒有(méi yǒu) + Objek',
+   examples:[
+     {h:'我有手機。',p:'Wǒ yǒu shǒu jī.',id:'Saya punya HP.'},
+     {h:'我沒有台灣朋友。',p:'Wǒ méi yǒu Tái wān péng yǒu.',id:'Saya tidak punya teman Taiwan.'},
+     {h:'你有課嗎？',p:'Nǐ yǒu kè ma?',id:'Kamu ada kelas?'},
+   ], note:'PENTING: Negasi dari 有 adalah 沒有 (BUKAN 不有!) Ini tidak bisa pakai 不!'},
+  {ch:'Bab 2', title:'N + 的 + N (Kepemilikan)', formula:'Pemilik + 的 (de) + Benda yang dimiliki',
+   examples:[
+     {h:'我的書',p:'Wǒ de shū',id:'Buku saya'},
+     {h:'媽媽的生日',p:'Mā ma de shēng rì',id:'Ulang tahun ibu'},
+     {h:'這是誰的手機？',p:'Zhè shì shéi de shǒu jī?',id:'Ini HP siapa?'},
+   ], note:'Boleh disingkat jika hubungan dekat: 我媽媽 (ibu saya) = 我的媽媽. TIDAK bisa disingkat untuk benda: 我的書 (tidak bisa jadi 我書)'},
+  {ch:'Bab 2', title:'S + 正在 + V + O (Sedang)', formula:'Subjek + 正在 (zhèng zài) + Kata Kerja',
+   examples:[
+     {h:'媽媽正在做飯。',p:'Mā ma zhèng zài zuò fàn.',id:'Ibu sedang memasak.'},
+     {h:'他正在睡覺。',p:'Tā zhèng zài shuì jiào.',id:'Dia sedang tidur.'},
+     {h:'我正在看書。',p:'Wǒ zhèng zài kàn shū.',id:'Saya sedang membaca buku.'},
+   ], note:'正在 = sedang (progress). Bisa juga hanya pakai 在: 他在睡覺'},
+  {ch:'Bab 2', title:'A不A? (Pertanyaan Pilihan)', formula:'Kata Kerja/Sifat + 不 (bù) + Kata Kerja/Sifat',
+   examples:[
+     {h:'你忙不忙？',p:'Nǐ máng bù máng?',id:'Kamu sibuk atau tidak?'},
+     {h:'他要不要去？',p:'Tā yào bù yào qù?',id:'Dia mau pergi atau tidak?'},
+     {h:'台灣熱不熱？',p:'Tái wān rè bù rè?',id:'Taiwan panas atau tidak?'},
+   ], note:'Ini alternatif dari kalimat + 嗎. Contoh: 你忙嗎? = 你忙不忙? Artinya sama!'},
+  {ch:'Bab 3', title:'S + 送 + S2 + O (Memberi Hadiah)', formula:'Pemberi + 想/要 + 送 + Penerima + Hadiah',
+   examples:[
+     {h:'我要送媽媽一個蛋糕。',p:'Wǒ yào sòng mā ma yī gè dàn gāo.',id:'Saya mau memberi ibu satu kue.'},
+     {h:'你想送她什麼禮物？',p:'Nǐ xiǎng sòng tā shén me lǐ wù?',id:'Kamu mau memberi dia hadiah apa?'},
+   ], note:'Urutan: PEMBERI + 送 + PENERIMA + HADIAH. Perhatikan: penerima sebelum hadiah!'},
+  {ch:'Bab 3', title:'這/那/哪 + Num + M + N', formula:'Demonstratif + Angka + Kata Satuan + Kata Benda',
+   examples:[
+     {h:'這三件衣服很漂亮。',p:'Zhè sān jiàn yī fú hěn piào liang.',id:'Tiga baju ini sangat cantik.'},
+     {h:'那四朵花怎麼樣？',p:'Nà sì duǒ huā zěn me yàng?',id:'Empat bunga itu bagaimana?'},
+     {h:'你要哪種筆？',p:'Nǐ yào nǎ zhǒng bǐ?',id:'Kamu mau pulpen jenis apa?'},
+   ], note:'这=ini/dekat | 那=itu/jauh | 哪=yang mana (tanya). WAJIB pakai kata satuan!'},
+  {ch:'Bab 3', title:'S + 都 + V (Semua)', formula:'Subjek + 都 (dōu) + Kata Kerja/Sifat',
+   examples:[
+     {h:'我們都很忙。',p:'Wǒ men dōu hěn máng.',id:'Kita semua sangat sibuk.'},
+     {h:'這兩件衣服都很漂亮。',p:'Zhè liǎng jiàn yī fú dōu hěn piào liang.',id:'Kedua baju ini semuanya cantik.'},
+     {h:'他們都不喜歡喝茶。',p:'Tā men dōu bù xǐ huān hē chá.',id:'Mereka semua tidak suka minum teh.'},
+   ], note:'都 selalu SETELAH subjek dan SEBELUM predikat. Urutan negasi: S + 都 + 不 + V'},
+  {ch:'Bab 4', title:'還是 (Pilihan atau/atau)', formula:'Pilihan A + 還是 (hái shì) + Pilihan B?',
+   examples:[
+     {h:'你要茶還是咖啡？',p:'Nǐ yào chá hái shì kā fēi?',id:'Kamu mau teh atau kopi?'},
+     {h:'你去還是不去？',p:'Nǐ qù hái shì bù qù?',id:'Kamu pergi atau tidak pergi?'},
+   ], note:'還是 untuk pertanyaan pilihan (jawab salah satu). Berbeda dengan 或者(huò zhě) yang untuk pernyataan.'},
+  {ch:'Bab 4', title:'太 + Vs + 了 (Terlalu)', formula:'太 (tài) + Kata Sifat + 了 (le)',
+   examples:[
+     {h:'這件衣服太貴了！',p:'Zhè jiàn yī fú tài guì le!',id:'Baju ini terlalu mahal!'},
+     {h:'她今天太累了。',p:'Tā jīn tiān tài lèi le.',id:'Dia hari ini terlalu lelah.'},
+     {h:'這個太好吃了！',p:'Zhè gè tài hǎo chī le!',id:'Ini terlalu enak!'},
+   ], note:'Bisa positif (太好吃了! = enak banget!) atau negatif (太貴了! = terlalu mahal!)'},
+  {ch:'Bab 6', title:'S + 會 + V (Kemampuan)', formula:'Subjek + 會 (huì) + Kata Kerja',
+   examples:[
+     {h:'我會游泳。',p:'Wǒ huì yóu yǒng.',id:'Saya bisa berenang.'},
+     {h:'你會說中文嗎？',p:'Nǐ huì shuō Zhōng wén ma?',id:'Kamu bisa berbicara Mandarin?'},
+     {h:'我不會打網球。',p:'Wǒ bù huì dǎ wǎng qiú.',id:'Saya tidak bisa main tenis.'},
+   ], note:'會 untuk kemampuan yang dipelajari. Negasi: 不會 (bù huì). Tanya: 會不會?'},
+  {ch:'Bab 6', title:'S + V + 得 + Vs (Kualitas/Hasil)', formula:'Subjek + Kata Kerja + 得 (de) + Kata Sifat',
+   examples:[
+     {h:'她跑得很快。',p:'Tā pǎo de hěn kuài.',id:'Dia berlari dengan sangat cepat.'},
+     {h:'他中文說得很好。',p:'Tā Zhōng wén shuō de hěn hǎo.',id:'Dia berbicara Mandarin dengan bagus.'},
+     {h:'你睡得怎麼樣？',p:'Nǐ shuì de zěn me yàng?',id:'Kamu tidur bagaimana?'},
+   ], note:'POLA PENTING: Jika ada objek, ulangi kata kerja! S+V(O)+V+得+Vs. Contoh: 她打籃球打得很好'},
+  {ch:'Bab 6', title:'S1 + 比 + S2 + Vs (Membandingkan)', formula:'A + 比 (bǐ) + B + Kata Sifat',
+   examples:[
+     {h:'姐姐比妹妹漂亮。',p:'Jiě jie bǐ mèi mei piào liang.',id:'Kakak lebih cantik dari adik.'},
+     {h:'今天比昨天熱。',p:'Jīn tiān bǐ zuó tiān rè.',id:'Hari ini lebih panas dari kemarin.'},
+   ], note:'A 比 B + Sifat = A lebih [sifat] dari B. Jangan tambah 很 setelah 比!'},
+  {ch:'Bab 6', title:'可以 (Boleh/Bisa - Izin/Saran)', formula:'Subjek + 可以 (kě yǐ) + Kata Kerja',
+   examples:[
+     {h:'我可以去洗手間嗎？',p:'Wǒ kě yǐ qù xǐ shǒu jiān ma?',id:'Boleh saya pergi ke toilet?'},
+     {h:'你可以送她一件衣服。',p:'Nǐ kě yǐ sòng tā yī jiàn yī fú.',id:'Kamu bisa memberinya sebuah baju.'},
+     {h:'這裡不可以吃東西。',p:'Zhè lǐ bù kě yǐ chī dōng xī.',id:'Di sini tidak boleh makan.'},
+   ], note:'可以 = boleh (izin) atau bisa (saran). Negasi: 不可以 (tidak boleh) - lebih kuat dari 不要'},
+  {ch:'Bab 7', title:'從...到... (Dari...ke...)', formula:'從 (cóng) + Tempat A + 到 (dào) + Tempat B',
+   examples:[
+     {h:'從學校到飯店走路去。',p:'Cóng xué xiào dào fàn diàn zǒu lù qù.',id:'Jalan kaki dari sekolah ke hotel.'},
+     {h:'從我家到機場不遠。',p:'Cóng wǒ jiā dào jī chǎng bù yuǎn.',id:'Dari rumahku ke bandara tidak jauh.'},
+   ], note:'從 = dari (titik awal) | 到 = ke/sampai (titik tujuan). Bisa juga hanya 到 saja.'},
+  {ch:'Bab 7', title:'怎麼 + V? (Bagaimana caranya?)', formula:'怎麼 (zěn me) + Kata Kerja?',
+   examples:[
+     {h:'怎麼走？',p:'Zěn me zǒu?',id:'Bagaimana cara jalannya?'},
+     {h:'這個字怎麼說？',p:'Zhè gè zì zěn me shuō?',id:'Kata ini bagaimana cara mengucapkannya?'},
+     {h:'怎麼辦？',p:'Zěn me bàn?',id:'Harus bagaimana? (ekspresi bingung)'},
+   ], note:'怎麼 untuk menanyakan CARA melakukan sesuatu. 怎麼樣 untuk menanyakan kondisi/pendapat.'},
+];
+
+const CLASSIFIERS = [
+  {clf:'個',p:'gè',use:'Umum (orang, benda umum)',ex1:'一個人 (satu orang)',ex2:'三個問題 (tiga pertanyaan)',clr:'var(--primary)'},
+  {clf:'本',p:'běn',use:'Buku, buku catatan',ex1:'兩本書 (dua buku)',ex2:'五本中文書 (5 buku Mandarin)',clr:'#feca57'},
+  {clf:'件',p:'jiàn',use:'Pakaian (baju, kemeja, dll)',ex1:'一件衣服 (satu baju)',ex2:'三件T恤 (3 kaos)',clr:'#48dbfb'},
+  {clf:'條',p:'tiáo',use:'Celana, rok, sesuatu yang panjang',ex1:'兩條短褲 (dua celana pendek)',ex2:'一條裙子 (satu rok)',clr:'#1dd1a1'},
+  {clf:'台',p:'tái',use:'Mesin, elektronik, komputer',ex1:'一台電腦 (satu komputer)',ex2:'兩台手機 (dua HP)',clr:'#fd79a8'},
+  {clf:'雙',p:'shuāng',use:'Berpasangan (sepatu, kaus kaki)',ex1:'一雙鞋 (sepasang sepatu)',ex2:'兩雙手套 (dua pasang sarung tangan)',clr:'#a29bfe'},
+  {clf:'朵',p:'duǒ',use:'Bunga (satuan)',ex1:'一朵花 (setangkai bunga)',ex2:'三朵玫瑰 (tiga bunga mawar)',clr:'#ff9ff3'},
+  {clf:'束',p:'shù',use:'Ikat/bundel bunga',ex1:'一束花 (satu ikat bunga)',ex2:'兩束花 (dua ikat bunga)',clr:'#ff6b6b'},
+  {clf:'枝',p:'zhī',use:'Alat tulis kecil (pensil, pulpen)',ex1:'一枝筆 (satu pulpen)',ex2:'六枝鉛筆 (6 pensil)',clr:'#fdcb6e'},
+  {clf:'杯',p:'bēi',use:'Gelas minuman',ex1:'一杯水 (segelas air)',ex2:'兩杯咖啡 (dua gelas kopi)',clr:'#00b894'},
+  {clf:'碗',p:'wǎn',use:'Mangkok makanan',ex1:'一碗麵 (semangkok mie)',ex2:'兩碗飯 (dua mangkok nasi)',clr:'#0984e3'},
+  {clf:'瓶',p:'píng',use:'Botol',ex1:'一瓶水 (sebotol air)',ex2:'兩瓶汽水 (dua botol soda)',clr:'#6c5ce7'},
+  {clf:'部',p:'bù',use:'Film, kendaraan',ex1:'一部電影 (satu film)',ex2:'一部車 (satu mobil)',clr:'#e17055'},
+  {clf:'位',p:'wèi',use:'Orang (formal/sopan)',ex1:'一位老師 (seorang guru)',ex2:'五位客人 (5 tamu)',clr:'#00cec9'},
+  {clf:'份',p:'fèn',use:'Porsi makanan, eksemplar',ex1:'一份牛肉麵 (satu porsi mi sapi)',ex2:'兩份報紙 (dua eksemplar koran)',clr:'#fdcb6e'},
+];
+
+const DIALOGUES = [
+  {ch:'Bab 1 – 新同學', title:'Percakapan: Teman Baru', lines:[
+    {spk:'中明',h:'宜文，她是誰？',p:'Yí wén, tā shì shuí?',id:'Yiwen, dia siapa?'},
+    {spk:'宜文',h:'她是新同學，她叫友美。她很可愛。',p:'Tā shì xīn tóng xué, tā jiào Yǒuměi. Tā hěn kě ài.',id:'Dia teman baru, namanya Youmei. Dia sangat imut.'},
+    {spk:'中明',h:'她是哪國人？你知道嗎？',p:'Tā shì nǎ guó rén? Nǐ zhī dào ma?',id:'Dia orang negara mana? Kamu tahu?'},
+    {spk:'宜文',h:'我知道，她是日本人。',p:'Wǒ zhī dào, tā shì Rì běn rén.',id:'Saya tahu, dia orang Jepang.'},
+    {spk:'中明',h:'她很漂亮。',p:'Tā hěn piào liang.',id:'Dia sangat cantik.'},
+    {spk:'友美',h:'你好！我姓小林，叫友美。',p:'Nǐ hǎo! Wǒ xìng Xiǎolín, jiào Yǒuměi.',id:'Halo! Marga saya Kobayashi, nama saya Youmei.'},
+    {spk:'中明',h:'請問你是哪國人？',p:'Qǐng wèn nǐ shì nǎ guó rén?',id:'Permisi, kamu orang negara mana?'},
+    {spk:'友美',h:'我是日本人，你呢？',p:'Wǒ shì Rì běn rén, nǐ ne?',id:'Saya orang Jepang, kamu?'},
+    {spk:'中明',h:'我是印尼人。你喜歡台灣嗎？',p:'Wǒ shì Yìn ní rén. Nǐ xǐ huān Tái wān ma?',id:'Saya orang Indonesia. Apakah kamu suka Taiwan?'},
+    {spk:'友美',h:'我喜歡台灣！',p:'Wǒ xǐ huān Tái wān!',id:'Saya suka Taiwan!'},
+  ]},
+  {ch:'Bab 2 – 你幾點去學校', title:'Percakapan: Pesta Ulang Tahun', lines:[
+    {spk:'宜文',h:'今天是星期五，明天是週末，你們要不要來我家？',p:'Jīn tiān shì xīng qí wǔ, míng tiān shì zhōu mò, nǐ men yào bù yào lái wǒ jiā?',id:'Hari ini Jumat, besok akhir pekan, mau tidak kalian ke rumahku?'},
+    {spk:'中明',h:'明天是九月二十九號…啊！是你的生日！',p:'Míng tiān shì jiǔ yuè èr shí jiǔ hào... a! Shì nǐ de shēng rì!',id:'Besok tanggal 29 September... ah! Itu ultahmu!'},
+    {spk:'友美',h:'宜文，生日快樂！',p:'Yí wén, shēng rì kuài lè!',id:'Yiwen, selamat ulang tahun!'},
+    {spk:'宜文',h:'謝謝！明天晚上六點來我家，好不好！',p:'Xiè xie! Míng tiān wǎn shàng liù diǎn lái wǒ jiā, hǎo bù hǎo!',id:'Terima kasih! Besok malam jam 6 ke rumahku, boleh ya!'},
+    {spk:'中明',h:'沒問題。',p:'Méi wèn tí.',id:'Tidak ada masalah.'},
+    {spk:'友美',h:'好，明天見！再見!',p:'Hǎo, míng tiān jiàn! Zài jiàn!',id:'Oke, sampai besok! Sampai jumpa!'},
+  ]},
+  {ch:'Bab 6 – 週末去打網球吧', title:'Percakapan: Olahraga di Pantai', lines:[
+    {spk:'國安',h:'今天天氣不錯，海邊的風景也很漂亮，我想去游泳，妳們想去嗎？',p:'Jīn tiān tiān qì bù cuò, hǎi biān de fēng jǐng yě hěn piào liang, wǒ xiǎng qù yóu yǒng, nǐ men xiǎng qù ma?',id:'Cuaca hari ini bagus, pemandangan pantai juga sangat indah, saya mau berenang, kalian mau pergi?'},
+    {spk:'友美',h:'我不會游泳。宜文，你會游泳嗎？',p:'Wǒ bù huì yóu yǒng. Yí wén, nǐ huì yóu yǒng ma?',id:'Saya tidak bisa berenang. Yiwen, kamu bisa berenang?'},
+    {spk:'宜文',h:'我會游泳，可是游得不太好。',p:'Wǒ huì yóu yǒng, kě shì yóu de bù tài hǎo.',id:'Saya bisa berenang, tapi renangnya kurang bagus.'},
+    {spk:'國安',h:'我們去跑步，怎麼樣？',p:'Wǒ men qù pǎo bù, zěn me yàng?',id:'Kita pergi jogging, bagaimana?'},
+    {spk:'友美',h:'我不喜歡跑步，我跑步跑得很慢。',p:'Wǒ bù xǐ huān pǎo bù, wǒ pǎo bù pǎo de hěn màn.',id:'Saya tidak suka jogging, saya jogging sangat lambat.'},
+    {spk:'宜文',h:'打網球怎麼樣？我們一起去打吧。',p:'Dǎ wǎng qiú zěn me yàng? Wǒ men yī qǐ qù dǎ ba.',id:'Bagaimana kalau main tenis? Kita pergi main bersama.'},
+    {spk:'友美',h:'好啊！',p:'Hǎo a!',id:'Oke!'},
+  ]},
+  {ch:'Bab 7 – 怎麼到飯店去', title:'Percakapan: Cara ke Hotel', lines:[
+    {spk:'友美',h:'元真，我們明天幾點去找你的韓國朋友？',p:'Yuán zhēn, wǒ men míng tiān jǐ diǎn qù zhǎo nǐ de Hán guó péng yǒu?',id:'Yuanzhen, besok jam berapa kita pergi menemui teman Koreamu?'},
+    {spk:'元真',h:'我們下午四點要到天美飯店，她在那裡等我們。',p:'Wǒ men xià wǔ sì diǎn yào dào Tiān měi fàn diàn, tā zài nà lǐ děng wǒ men.',id:'Kita jam 4 sore harus tiba di Hotel Tianmei, dia menunggu kita di sana.'},
+    {spk:'友美',h:'我們要怎麼去？坐捷運還是坐公車？',p:'Wǒ men yào zěn me qù? Zuò jié yùn hái shì zuò gōng chē?',id:'Kita harus bagaimana perginya? Naik MRT atau naik bus?'},
+    {spk:'元真',h:'聽說那家飯店不遠，我想我們可以從學校走路去。',p:'Tīng shuō nà jiā fàn diàn bù yuǎn, wǒ xiǎng wǒ men kě yǐ cóng xué xiào zǒu lù qù.',id:'Katanya hotel itu tidak jauh, saya pikir kita bisa jalan kaki dari sekolah.'},
+    {spk:'友美',h:'可是我不知道怎麼走，你知道嗎？',p:'Kě shì wǒ bù zhī dào zěn me zǒu, nǐ zhī dào ma?',id:'Tapi saya tidak tahu cara jalannya, kamu tahu?'},
+    {spk:'元真',h:'我也不知道。我們可以上網看地圖。',p:'Wǒ yě bù zhī dào. Wǒ men kě yǐ shàng wǎng kàn dì tú.',id:'Saya juga tidak tahu. Kita bisa lihat peta online.'},
+    {spk:'友美',h:'啊！上課了！我們先上課吧！',p:'A! Shàng kè le! Wǒ men xiān shàng kè ba!',id:'Ah! Kelas mau mulai! Kita masuk kelas dulu!'},
+  ]},
+];
+
+const TONE_PAIRS = [
+  {w1:'買 mǎi (Membeli)',w2:'賣 mài (Menjual)',c1:'var(--tone3)',c2:'var(--tone4)',h1:'買',h2:'賣'},
+  {w1:'是 shì (Adalah)',w2:'事 shì (Hal)',c1:'var(--tone4)',c2:'var(--tone4)',h1:'是',h2:'事'},
+  {w1:'媽 mā (Ibu)',w2:'馬 mǎ (Kuda)',c1:'var(--tone1)',c2:'var(--tone3)',h1:'媽',h2:'馬'},
+  {w1:'問 wèn (Bertanya)',w2:'文 wén (Bahasa/Sastra)',c1:'var(--tone4)',c2:'var(--tone2)',h1:'問',h2:'文'},
+  {w1:'大 dà (Besar)',w2:'打 dǎ (Memukul)',c1:'var(--tone4)',c2:'var(--tone3)',h1:'大',h2:'打'},
+  {w1:'書 shū (Buku)',w2:'熟 shú (Matang)',c1:'var(--tone1)',c2:'var(--tone2)',h1:'書',h2:'熟'},
+];
+
+// ===================== STATE =====================
+let currentChapterFilter = 'all';
+let learnedWords = JSON.parse(localStorage.getItem('learnedWords') || '[]');
+let fcQueue = [], fcIndex = 0, fcKnow = 0, fcDunno = 0;
+let quizQuestions = [], quizIndex = 0, quizScore = 0, quizAnswered = false;
+let memCards = [], memFlipped = [], memMatched = 0, memMoves = 0, memTimerInt = null, memTimerVal = 0;
+let currentModalWord = null;
+
+// ===================== INIT =====================
+window.onload = () => {
+  renderChapters();
+  renderVocab();
+  renderGrammar();
+  renderDialogues();
+  renderClassifiers();
+  renderTonePairs();
+  updateProgress();
+  initFlashcard();
+};
+
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b => {
+    if(b.getAttribute('onclick') && b.getAttribute('onclick').includes("'"+id+"'")) b.classList.add('active');
+  });
+  if(id==='vocab') renderVocab();
+  if(id==='home') updateProgress();
+}
+
+// ===================== CHAPTERS =====================
+function renderChapters() {
+  const g = document.getElementById('chaptersGrid');
+  g.innerHTML = CHAPTERS.map(c => {
+    const cnt = VOCAB.filter(v => v.ch===c.num).length;
+    return `<div class="chapter-card" onclick="showPage('vocab');filterChapter('${c.num}',null)">
+      <div class="num">${c.num}</div>
+      <h3>${c.title}</h3>
+      <div class="hanzi">${c.hanzi}</div>
+      <p style="font-size:0.82rem;color:var(--gray);margin-top:6px">${c.desc}</p>
+      <span class="count">📚 ${cnt} kata</span>
+    </div>`;
+  }).join('');
+}
+
+// ===================== VOCAB =====================
+function getToneClass(word) {
+  const toneMap = {'1':'t1','2':'t2','3':'t3','4':'t4','5':'t5'};
+  const t = word.t || 5;
+  return toneMap[t] || 't5';
+}
+function getToneColor(word) {
+  const colors = {1:'var(--tone1)',2:'var(--tone2)',3:'var(--tone3)',4:'var(--tone4)',5:'var(--tone5)'};
+  return colors[word.t || 5];
+}
+
+function renderVocab(filter='all', search='') {
+  const g = document.getElementById('vocabGrid');
+  let words = VOCAB;
+  if(filter !== 'all') words = words.filter(v => v.ch === filter);
+  if(search) words = words.filter(v => 
+    v.h.includes(search) || v.p.toLowerCase().includes(search.toLowerCase()) || v.m.toLowerCase().includes(search.toLowerCase())
+  );
+  if(words.length === 0) { g.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--gray)">🔍 Tidak ditemukan. Coba kata lain.</div>'; return; }
+  g.innerHTML = words.map((w,i) => {
+    const learned = learnedWords.includes(w.h);
+    const tc = getToneColor(w);
+    return `<div class="vocab-card ${learned?'learned':''}" onclick="openModal('${w.h.replace(/'/g,"\\'")}')">
+      <span class="pos-badge">${w.pos}</span>
+      <span class="hanzi-big" style="color:${tc}">${w.h}</span>
+      <span class="pinyin" style="color:${tc}">${w.p}</span>
+      <span class="meaning">${w.m}</span>
+      <button class="speak-btn" onclick="event.stopPropagation();speak('${w.h}')">🔊</button>
+    </div>`;
+  }).join('');
+}
+
+function filterChapter(ch, btn) {
+  currentChapterFilter = ch;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  else {
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      const oc = b.getAttribute('onclick');
+      if(oc && oc.includes("'"+ch+"'")) b.classList.add('active');
+    });
+  }
+  renderVocab(ch, document.getElementById('searchInput')?.value || '');
+}
+
+function filterVocab() {
+  renderVocab(currentChapterFilter, document.getElementById('searchInput').value);
+}
+
+// ===================== MODAL =====================
+function openModal(hanzi) {
+  const w = VOCAB.find(v => v.h === hanzi);
+  if(!w) return;
+  currentModalWord = w;
+  document.getElementById('mHanzi').textContent = w.h;
+  document.getElementById('mHanzi').style.color = getToneColor(w);
+  document.getElementById('mPinyin').textContent = w.p;
+  document.getElementById('mPinyin').style.color = getToneColor(w);
+  document.getElementById('mMeaning').textContent = '📖 ' + w.m + ' (' + w.pos + ')';
+  const ex = document.getElementById('mExamples');
+  const toneDesc = {1:'Nada 1 – Tinggi rata (ā)',2:'Nada 2 – Naik (á)',3:'Nada 3 – Turun-naik (ǎ)',4:'Nada 4 – Turun (à)',5:'Nada 5 – Netral'};
+  ex.innerHTML = `
+    <div style="background:var(--light);border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="font-size:0.8rem;font-weight:700;color:${getToneColor(w)};margin-bottom:6px">🎵 ${toneDesc[w.t||5]}</div>
+      <div style="font-family:'Noto Sans TC';font-size:1.1rem;margin-bottom:4px">${w.ex||'—'}</div>
+    </div>
+    <div style="background:var(--light);border-radius:12px;padding:14px">
+      <div style="font-size:0.8rem;font-weight:700;color:var(--gray);margin-bottom:4px">📝 Kata terkait dari bab ini:</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px">${
+        VOCAB.filter(v=>v.ch===w.ch&&v.h!==w.h).slice(0,5).map(v=>`<span onclick="openModal('${v.h.replace(/'/g,"\\'")}')" style="background:white;border:2px solid var(--border);padding:4px 10px;border-radius:20px;cursor:pointer;font-family:'Noto Sans TC';font-size:0.9rem;color:${getToneColor(v)}">${v.h}</span>`).join('')
+      }</div>
+    </div>`;
+  document.getElementById('vocabModal').classList.add('show');
+}
+function closeModal(e) { if(e.target===document.getElementById('vocabModal')) document.getElementById('vocabModal').classList.remove('show'); }
+function speakModal() { if(currentModalWord) speak(currentModalWord.h); }
+function markLearnedFromModal() {
+  if(!currentModalWord) return;
+  const h = currentModalWord.h;
+  if(!learnedWords.includes(h)) learnedWords.push(h);
+  else learnedWords = learnedWords.filter(w=>w!==h);
+  localStorage.setItem('learnedWords', JSON.stringify(learnedWords));
+  updateProgress();
+  renderVocab(currentChapterFilter, document.getElementById('searchInput')?.value||'');
+  showNotif('✓ Ditandai sebagai dipelajari!', 'success');
+}
+
+// ===================== SPEECH =====================
+function speak(text) {
+  if(!window.speechSynthesis) return;
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'zh-TW';
+  u.rate = 0.85;
+  u.pitch = 1.1;
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(u);
+}
+
+// ===================== FLASHCARD =====================
+function initFlashcard() {
+  const ch = document.getElementById('fcChapter').value;
+  let words = ch==='all' ? VOCAB : VOCAB.filter(v=>v.ch===ch);
+  // Shuffle
+  fcQueue = [...words].sort(()=>Math.random()-0.5);
+  fcIndex = 0; fcKnow = 0; fcDunno = 0;
+  document.getElementById('fcScene').classList.remove('flipped');
+  updateFlashcard();
+}
+
+function updateFlashcard() {
+  const mode = document.getElementById('fcMode').value;
+  const total = fcQueue.length;
+  document.getElementById('fcLeft').textContent = total - fcIndex;
+  document.getElementById('fcKnow').textContent = fcKnow;
+  document.getElementById('fcDunno').textContent = fcDunno;
+  document.getElementById('fcProgressBar').style.width = (fcIndex/total*100)+'%';
+  if(fcIndex >= fcQueue.length) { endFlashcard(); return; }
+  const w = fcQueue[fcIndex];
+  const modes = {
+    'h2m': {front: w.h, frontStyle:'font-family:"Noto Sans TC";font-size:3.5rem;color:'+getToneColor(w), hint:'Apa artinya?', backMain: w.m, backSub: w.p},
+    'm2h': {front: w.m, frontStyle:'font-size:1.6rem;font-weight:900', hint:'Apa hanzinya?', backMain: w.h, backSub: w.p},
+    'p2h': {front: w.p, frontStyle:'font-size:1.8rem;font-weight:900;color:'+getToneColor(w), hint:'Apa hanzinya?', backMain: w.h, backSub: w.m},
+    'h2p': {front: w.h, frontStyle:'font-family:"Noto Sans TC";font-size:3.5rem;color:'+getToneColor(w), hint:'Apa pinyinnya?', backMain: w.p, backSub: w.m},
+  };
+  const m = modes[mode];
+  const fe = document.getElementById('fcFront');
+  fe.textContent = m.front; fe.style = m.frontStyle;
+  document.getElementById('fcHint').textContent = '👆 Klik kartu untuk lihat jawaban · ' + m.hint;
+  document.getElementById('fcBackMain').textContent = m.backMain;
+  document.getElementById('fcBackSub').textContent = m.backSub;
+  document.getElementById('fcScene').classList.remove('flipped');
+}
+
+function flipCard() { document.getElementById('fcScene').classList.toggle('flipped'); }
+function speakCurrent() { if(fcQueue[fcIndex]) speak(fcQueue[fcIndex].h); }
+
+function rateCard(knew) {
+  if(fcIndex >= fcQueue.length) return;
+  if(knew) { fcKnow++; if(!learnedWords.includes(fcQueue[fcIndex].h)) learnedWords.push(fcQueue[fcIndex].h); }
+  else { fcDunno++; fcQueue.push(fcQueue[fcIndex]); } // add to end if not known
+  localStorage.setItem('learnedWords', JSON.stringify(learnedWords));
+  fcIndex++;
+  updateFlashcard();
+}
+function nextCard() { fcIndex++; updateFlashcard(); }
+
+function endFlashcard() {
+  document.getElementById('fcFront').textContent = '🎉';
+  document.getElementById('fcFront').style = 'font-size:4rem';
+  document.getElementById('fcHint').textContent = `Selesai! Hafal: ${fcKnow} | Belum: ${fcDunno}`;
+  document.getElementById('fcBackMain').textContent = 'Klik Acak Ulang untuk mulai lagi';
+  document.getElementById('fcBackSub').textContent = '';
+}
+
+// ===================== QUIZ =====================
+function startQuiz() {
+  const ch = document.getElementById('quizChapter').value;
+  const type = document.getElementById('quizType').value;
+  let words = ch==='all' ? VOCAB : VOCAB.filter(v=>v.ch===ch);
+  if(words.length < 4) { showNotif('Pilih bab yang lebih besar!','error'); return; }
+  words = [...words].sort(()=>Math.random()-0.5).slice(0,10);
+  quizQuestions = words.map(w => {
+    let q,correct,getOpts;
+    const others = VOCAB.filter(v=>v.h!==w.h);
+    if(type==='h2m') {
+      q = w.h; correct = w.m;
+      getOpts = () => [...new Set(others.sort(()=>Math.random()-0.5).slice(0,3).map(v=>v.m)), w.m].sort(()=>Math.random()-0.5);
+    } else if(type==='m2h') {
+      q = w.m; correct = w.h;
+      getOpts = () => [...new Set(others.sort(()=>Math.random()-0.5).slice(0,3).map(v=>v.h)), w.h].sort(()=>Math.random()-0.5);
+    } else if(type==='p2m') {
+      q = w.p; correct = w.m;
+      getOpts = () => [...new Set(others.sort(()=>Math.random()-0.5).slice(0,3).map(v=>v.m)), w.m].sort(()=>Math.random()-0.5);
+    } else {
+      q = w.h; correct = w.p;
+      getOpts = () => [...new Set(others.sort(()=>Math.random()-0.5).slice(0,3).map(v=>v.p)), w.p].sort(()=>Math.random()-0.5);
+    }
+    const opts = getOpts();
+    return {q, correct, opts: opts.slice(0,4), word:w, type};
+  });
+  quizIndex = 0; quizScore = 0; quizAnswered = false;
+  document.getElementById('qTotal').textContent = quizQuestions.length;
+  document.getElementById('quizResult').style.display = 'none';
+  renderQuizQuestion();
+}
+
+function renderQuizQuestion() {
+  const qa = document.getElementById('quizArea');
+  if(quizIndex >= quizQuestions.length) { endQuiz(); return; }
+  const q = quizQuestions[quizIndex];
+  document.getElementById('qNum').textContent = quizIndex+1;
+  document.getElementById('qScore').textContent = quizScore;
+  quizAnswered = false;
+  const isHanzi = q.type==='h2m'||q.type==='h2p';
+  const isIdText = q.type==='m2h'||q.type==='p2m';
+  const qStyle = isHanzi ? `font-family:'Noto Sans TC';font-size:4rem;font-weight:900;color:${getToneColor(q.word)}` 
+    : `font-size:1.8rem;font-weight:900;color:white`;
+  const optIsHanzi = q.type==='m2h';
+  qa.innerHTML = `
+    <div class="quiz-q animate-in">
+      <div class="q-label">${{h2m:'漢字 → Arti (bahasa Indonesia)',m2h:'Arti → 漢字',p2m:'Pinyin → Arti',h2p:'漢字 → Pinyin'}[q.type]}</div>
+      <div class="big-hanzi" style="${qStyle}">${q.q}</div>
+      <button onclick="speak('${q.word.h}')" style="margin-top:12px;background:rgba(255,255,255,0.2);border:none;color:white;padding:6px 16px;border-radius:20px;cursor:pointer;font-weight:700">🔊 Dengar</button>
+    </div>
+    <div class="quiz-options animate-in" id="quizOpts">
+      ${q.opts.map((o,i) => `<div class="quiz-opt" id="opt${i}" onclick="selectOpt(${i},'${o.replace(/'/g,"\\'")}','${q.correct.replace(/'/g,"\\'")}')">
+        <span style="${optIsHanzi?`font-family:'Noto Sans TC';font-size:1.5rem`:''}">${o}</span>
+      </div>`).join('')}
+    </div>
+    <div id="quizFeedback" style="display:none;text-align:center;margin-top:12px;font-weight:800;font-size:1rem"></div>
+  `;
+}
+
+function selectOpt(idx, chosen, correct) {
+  if(quizAnswered) return;
+  quizAnswered = true;
+  const opts = document.querySelectorAll('.quiz-opt');
+  const fb = document.getElementById('quizFeedback');
+  opts.forEach((o,i) => {
+    const text = o.querySelector('span').textContent;
+    if(text === correct) { o.classList.add('correct'); o.classList.add('reveal'); }
+    if(i===idx && chosen!==correct) o.classList.add('wrong');
+  });
+  if(chosen===correct) {
+    quizScore++;
+    fb.style.display='block'; fb.style.color='var(--tone3)'; fb.textContent='✅ Benar! 很好！';
+    document.getElementById('qScore').textContent = quizScore;
+    speak(quizQuestions[quizIndex].word.h);
+  } else {
+    fb.style.display='block'; fb.style.color='var(--tone1)';
+    fb.textContent=`❌ Salah! Jawaban benar: ${correct}`;
+  }
+  setTimeout(() => { quizIndex++; renderQuizQuestion(); }, 1500);
+}
+
+function endQuiz() {
+  document.getElementById('quizArea').innerHTML='';
+  const pct = Math.round(quizScore/quizQuestions.length*100);
+  const ring = document.getElementById('scoreRing');
+  ring.style.setProperty('--pct', pct+'%');
+  document.getElementById('finalScore').textContent = pct+'%';
+  document.getElementById('quizResult').style.display='block';
+  const msgs = [
+    [90,'🏆 Luar Biasa!','Kamu siap ujian! 太棒了！'],
+    [70,'😊 Bagus Sekali!','Sedikit lagi sempurna! 繼續加油！'],
+    [50,'💪 Lumayan!','Latih lagi ya! 再加油！'],
+    [0,'😅 Perlu Latihan!','Jangan menyerah! 不要放棄！'],
+  ];
+  const [score,msg,sub] = msgs.find(([s])=>pct>=s);
+  document.getElementById('resultMsg').textContent = msg;
+  document.getElementById('resultSub').textContent = sub;
+}
+
+// ===================== GRAMMAR =====================
+function renderGrammar() {
+  const g = document.getElementById('grammarContent');
+  g.innerHTML = GRAMMAR.map(gr => `
+    <div class="grammar-section animate-in">
+      <div class="grammar-title">${gr.title}</div>
+      <div class="grammar-chapter">📖 ${gr.ch}</div>
+      <div class="formula-box">📐 Formula: ${gr.formula}</div>
+      ${gr.examples.map(ex => `
+        <div class="example-row">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+            <button onclick="speak('${ex.h}')" style="background:var(--primary2);border:none;padding:4px 10px;border-radius:20px;cursor:pointer;font-size:0.8rem;font-weight:700">🔊</button>
+            <span class="example-hanzi">${ex.h}</span>
+          </div>
+          <div class="example-pinyin" style="color:var(--gray)">${ex.p}</div>
+          <div class="example-id" style="color:var(--tone3)">🇮🇩 ${ex.id}</div>
+        </div>
+      `).join('')}
+      ${gr.note ? `<div style="background:linear-gradient(135deg,#feca5722,#ff9f4322);border:2px solid var(--primary2);border-radius:12px;padding:12px;margin-top:12px;font-size:0.88rem"><strong>💡 Catatan:</strong> ${gr.note}</div>` : ''}
+    </div>
+  `).join('');
+}
+
+// ===================== DIALOGUES =====================
+function renderDialogues() {
+  const g = document.getElementById('dialogueContent');
+  g.innerHTML = DIALOGUES.map(d => `
+    <div class="dialogue-box animate-in">
+      <div style="font-size:0.8rem;color:var(--gray);font-weight:700;margin-bottom:4px">📖 ${d.ch}</div>
+      <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:16px;color:var(--primary)">${d.title}</h3>
+      ${d.lines.map(l => `
+        <div class="dialogue-line">
+          <div class="speaker">👤 ${l.spk}:</div>
+          <div class="dl-hanzi">${l.h}</div>
+          <div class="dl-pinyin">${l.p}</div>
+          <div class="dl-id">🇮🇩 ${l.id}</div>
+          <button onclick="speak('${l.h.replace(/'/g,"\\'")}'); this.classList.add('speaking'); setTimeout(()=>this.classList.remove('speaking'),1000)" style="background:var(--light);border:none;padding:4px 12px;border-radius:20px;cursor:pointer;font-size:0.8rem;font-weight:700;margin-top:6px">🔊 Dengar</button>
+        </div>
+      `).join('')}
+    </div>
+  `).join('');
+}
+
+// ===================== CLASSIFIERS =====================
+function renderClassifiers() {
+  const t = document.getElementById('classifierTable');
+  t.innerHTML = CLASSIFIERS.map(c => `
+    <tr>
+      <td><span style="font-family:'Noto Sans TC';font-size:2rem;font-weight:900;color:${c.clr}">${c.clf}</span></td>
+      <td><span style="font-weight:700;color:${c.clr}">${c.p}</span></td>
+      <td style="font-size:0.9rem">${c.use}</td>
+      <td><div style="font-family:'Noto Sans TC'">${c.ex1}</div><div style="font-family:'Noto Sans TC';margin-top:4px">${c.ex2}</div></td>
+      <td><button onclick="speak('${c.clf}')" style="background:none;border:none;cursor:pointer;font-size:1.3rem">🔊</button></td>
+    </tr>
+  `).join('');
+}
+
+// ===================== TONE PAIRS =====================
+function renderTonePairs() {
+  const g = document.getElementById('tonePairs');
+  g.innerHTML = TONE_PAIRS.map(p => `
+    <div style="background:var(--light);border-radius:12px;padding:16px">
+      <div style="display:flex;gap:12px;margin-bottom:8px">
+        <div style="flex:1;text-align:center;background:white;border-radius:10px;padding:12px;cursor:pointer" onclick="speak('${p.h1}')">
+          <div style="font-family:'Noto Sans TC';font-size:2rem;color:${p.c1}">${p.h1}</div>
+          <div style="font-size:0.75rem;font-weight:700">${p.w1}</div>
+        </div>
+        <div style="flex:1;text-align:center;background:white;border-radius:10px;padding:12px;cursor:pointer" onclick="speak('${p.h2}')">
+          <div style="font-family:'Noto Sans TC';font-size:2rem;color:${p.c2}">${p.h2}</div>
+          <div style="font-size:0.75rem;font-weight:700">${p.w2}</div>
+        </div>
+      </div>
+      <p style="font-size:0.75rem;text-align:center;color:var(--gray)">Klik untuk dengar perbedaan nada!</p>
+    </div>
+  `).join('');
+}
+
+// ===================== MEMORY GAME =====================
+function startMemory() {
+  const ch = document.getElementById('memChapter').value;
+  let words = ch==='all' ? VOCAB : VOCAB.filter(v=>v.ch===ch);
+  words = [...words].sort(()=>Math.random()-0.5).slice(0,8);
+  memMatched = 0; memMoves = 0; memFlipped = [];
+  if(memTimerInt) clearInterval(memTimerInt);
+  memTimerVal = 0;
+  document.getElementById('memTimer').textContent = 0;
+  document.getElementById('memMoves').textContent = 0;
+  memTimerInt = setInterval(()=>{ memTimerVal++; document.getElementById('memTimer').textContent=memTimerVal; },1000);
+  
+  // Create pairs: hanzi + meaning
+  const pairs = [];
+  words.forEach((w,i) => {
+    pairs.push({id:i, type:'hanzi', text:w.h, match:i, word:w});
+    pairs.push({id:i+100, type:'meaning', text:w.m, match:i, word:w});
+  });
+  pairs.sort(()=>Math.random()-0.5);
+  memCards = pairs.map(p=>({...p, revealed:false, matched:false}));
+  
+  const g = document.getElementById('memoryGrid');
+  g.style.gridTemplateColumns = 'repeat(4, 1fr)';
+  g.innerHTML = memCards.map((c,i) => `
+    <div class="mem-card" id="mc${i}" onclick="flipMemCard(${i})">?</div>
+  `).join('');
+}
+
+function flipMemCard(idx) {
+  const c = memCards[idx];
+  if(c.revealed || c.matched || memFlipped.length >= 2) return;
+  c.revealed = true;
+  const el = document.getElementById('mc'+idx);
+  el.classList.add('revealed');
+  el.textContent = c.text;
+  if(c.type==='hanzi') { el.style.fontFamily = '"Noto Sans TC"'; el.style.color = getToneColor(c.word); }
+  memFlipped.push(idx);
+  if(memFlipped.length === 2) {
+    memMoves++;
+    document.getElementById('memMoves').textContent = memMoves;
+    const [a,b] = memFlipped;
+    if(memCards[a].match === memCards[b].match && a!==b) {
+      // Match!
+      setTimeout(()=>{
+        [a,b].forEach(i=>{ memCards[i].matched=true; document.getElementById('mc'+i).classList.add('matched'); });
+        memFlipped = []; memMatched++;
+        speak(memCards[a].word.h);
+        if(memMatched===8) {
+          clearInterval(memTimerInt);
+          showNotif(`🎉 Selesai! ${memMoves} langkah, ${memTimerVal}s`, 'success');
+        }
+      },400);
+    } else {
+      setTimeout(()=>{
+        [a,b].forEach(i=>{
+          memCards[i].revealed=false;
+          const e = document.getElementById('mc'+i);
+          e.classList.remove('revealed'); e.textContent='?';
+          e.style.fontFamily=''; e.style.color='';
+        });
+        memFlipped = [];
+      },900);
+    }
+  }
+}
+
+// ===================== PROGRESS =====================
+function updateProgress() {
+  const total = VOCAB.length;
+  const learned = learnedWords.length;
+  document.getElementById('progressCount').textContent = `${learned} / ${total}`;
+  document.getElementById('progressFill').style.width = (learned/total*100)+'%';
+}
+
+// ===================== NOTIFICATIONS =====================
+function showNotif(msg, type='success') {
+  const n = document.getElementById('notif');
+  n.textContent = msg;
+  n.className = `notif notif-${type}`;
+  n.style.display = 'block';
+  setTimeout(()=>{ n.style.display='none'; }, 2500);
+}
+</script>
+</body>
+</html>
